@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main {
+
+            /* background-color: seagreen; */
+            display: grid;
+            grid-template-columns: 30% 75%;
+            margin: auto;
+            width: 1300px;
+            height: 1200px;
+
+        }
+
+        #card {
+            margin: auto;
+            margin-top: 20px;
+        }
+
+        #container {
+            padding-top: 25px;
+            width: 90%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2%;
+            height: 97%;
+            margin-left: 3%;
+            text-align: center;
+           
+        }
+
+        #catergories {
+            margin-top: 40px;
+            height: 50%;
+            /* background-color: saddlebrown; */
+        }
+
+        #heading {
+            text-align: center;
+            background-color: rgb(41, 45, 53);
+            width: 1500px;
+            height: 200px;
+            margin: auto;
+            color: white;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        #heading>h1 {
+            padding-top: 80px;
+        }
+
+        img{
+            margin: auto;
+            width: 100%;
+            border-radius: 5%;
+            box-shadow:rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            transition: 0.2s ease-out;
+        }
+        img:hover{
+            transform: translateY(20px);
+        }
+
+
+        h2  {
+            transition: 0.5s;
+            font-weight: bold;
+        }
+
+        h2:hover{
+            color: forestgreen;
+            cursor: pointer;
+        }
+
+        #sort {
+            margin: auto;
+            background-color: khaki;
+            width: 1500px;
+            height: 90px;
+        }
+
+        button {
+            margin-bottom: 100px;
+            margin-left: 50px;
+            width: 200px;
+            height: 50px;
+            font-size: 2rem;
+            border-radius: 20px;
+            color: white;
+            background-color: rgb(255,0,68);
+            border:none;
+            box-shadow: inset 0 0 0 #f9e506;
+            transition: ease-in-out 0.3s;
+            outline: none;
+
+        }
+
+        button:hover{
+            box-shadow: inset 200px 0 0 #f9e506;
+            cursor: pointer;
+            color: black;
+
+
+        }
+
+        #page_btn {
+            margin-left: 50%;
+            margin-top: 25px;
+            font-size: 20px;
+
+        }
+
+        #page_btn>a {
+            display: inline-flex;
+            width: 60px;
+            height: 60px;
+            color: black;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            border-radius: 50%;
+            border: none;
+            text-decoration: none;
+            transition: background 0.4s;
+
+        }
+
+        .prod_1 {
+            background-color: #8EC038;
+        }
+
+        .prod_2 {
+            background-color: #F3F5ED;
+        }
+
+        .rounded_button {
+            background-color: #F3F5ED;
+        }
+
+        #page_btn>a:hover {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="heading">
+        <h1>Vegan Sweets</h1>
+    </div>
+    <button id="card" onclick="window.location.href='cart.html'">Go To Cart</button>
+    <div id="container"></div>
+</body>
+
+</html>
+
+<script>
+    var products = JSON.parse(localStorage.getItem("products"));
+
+    var cartArr= JSON.parse(localStorage.getItem("CartItems")) || [];
+
+    products.map(function (food) {
+        var div = document.createElement("div");
+        var image = document.createElement("img");
+        image.setAttribute("src", food.image_url);
+
+        var h2 = document.createElement("h2");
+        h2.textContent = food.name;
+
+        var p = document.createElement("p");
+        p.textContent = food.details;
+
+        var price = document.createElement("h3")
+        price.textContent = food.price;
+
+        var btn = document.createElement("button");
+        btn.textContent = "Add To Cart";
+
+        btn.addEventListener("click", function () {
+            addToCart(food)
+        })
+
+
+
+        div.append(image, h2, p, price, btn)
+
+        document.querySelector("#container").append(div);
+
+    })
+
+    function addToCart(food){
+        cartArr.push(food);
+
+        localStorage.setItem("CartItems", JSON.stringify(cartArr))
+
+        alert("Added Sucesufully");
+
+    }
+</script>
