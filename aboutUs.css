@@ -1,0 +1,307 @@
+/* ================= Full Scrren About Us PAge ======================= */
+body{
+    margin: 0px;
+    padding: 0px;
+}
+#head {
+    width: 100%;
+    height: 300px;
+    padding: 20px;
+    margin: 100px auto;
+    box-shadow: 0px 0px 10px 2px grey;
+    background-image: url("https://www.publicdomainpictures.net/pictures/240000/nahled/cupcakes-on-a-tray.jpg");
+    background-size:cover;
+}
+.name_head{
+    color: honeydew;
+    margin-left: 40%;
+    margin-top: 90px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bolder;
+    font-size: 50px;
+    margin-bottom: 0px;
+
+}
+.img_head{
+    width: 100%;
+    margin-bottom: 0px;
+}
+
+#name{
+    margin-top: 0%;
+    width: 100%;
+}
+
+.name_header{
+    margin:auto;
+    text-align: center;
+    width: 20%;
+    /* background-color: white; */
+    font-family: 'Sacramento', cursive;
+    color: #293d29;
+}
+
+
+
+.name_para{
+    margin:auto;
+    text-align: center;
+    padding:0.5% 5% 0% 5%;
+    width: 80%;
+    /* background-color:     indianred; */
+    font-family: sans-serif;
+    font-size: 16px;
+    color: #293d29;
+    font-weight: lighter;
+}
+
+
+.photo{
+    background-color: #b3b3b38e;
+    display: grid;
+    grid-template-columns: (4,1fr);
+    width: 95%;
+    height: 200px;
+    padding: 1% 5% 5% 5%;
+    margin-bottom: 0px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 20px;
+    grid-template-areas: 
+    "a b c d";
+}
+.photo :nth-child(1) {
+    width: 70%;    
+    border-radius: 50%;
+    border: 8px solid whitesmoke;
+    grid-area: "a";   
+}
+
+.photo :nth-child(2) {
+    width: 70%;    
+    border-radius: 50%;
+    border: 8px solid whitesmoke;
+    grid-area: "b";   
+
+}
+.photo :nth-child(3) {
+    width: 70%;    
+    border-radius: 50%;
+    border: 8px solid whitesmoke;
+    grid-area: "c";   
+   
+}
+.photo :nth-child(4) {
+    width: 70%;    
+    border-radius: 50%;
+    border: 8px solid whitesmoke;
+    grid-area: "d";   
+
+}
+
+
+#mission{
+    background-color: #F3F5ED;
+    width: 70%;
+    height: auto;
+    padding: 3%;
+    text-align: center;
+ 
+    align-items: center;
+    margin: auto;
+    margin-top: 0px;
+
+}
+.mission_name{
+    font-family: 'Fira Sans', sans-serif;
+}
+.mission_para{
+    padding: 0% 5% 0% 5%;
+    font-size: 17px;
+}
+
+.quote{
+    width: 80%;
+    /* background-color: grey; */
+    border: solid 3px #8EC038;
+    padding: 10%;
+    border-radius: 25px;
+    border: 2px solid  8EC038;
+    text-align: center;
+    align-items: center;
+    margin: auto;
+}
+
+/* ================= medium Scrren About Us PAge ======================= */
+
+@media only screen and (min-width:400px) and (max-width:720px) {
+
+
+#head {
+    height: 200px;
+    margin-bottom: 30px;
+}
+
+
+.img_head{
+    width: 100%;
+    margin-bottom: 0px;
+}
+
+.name_header{
+    width: 40%;
+
+}
+
+
+
+.name_para{
+    padding:0.5% 5% 2% 5%;
+    /* background-color:     indianred; */
+    font-size: 11px;
+}
+
+
+.photo{
+    padding: 0% 5% 0% 5%;
+    height: 170px;
+}
+.photo :nth-child(1) {
+
+    border: 8px solid whitesmoke;
+    margin-bottom: 0px;
+}
+
+
+
+#mission{
+    height: 450px;
+    padding: 0% 3% 0% 0%;
+    margin-top: 0px;
+    align-items: center;
+}
+.mission_name{
+    font-family: 'Fira Sans', sans-serif;
+}
+.mission_para{
+    padding: 0% 5% 0% 5%;
+    font-size: 17px;
+}
+
+.quote{
+    width: 80%;
+    /* background-color: grey; */
+    padding: 10%;
+    border-radius: 25px;
+    border: 2px solid  8EC038;
+    text-align: center;
+    align-items: center;
+    margin: auto;
+}
+}
+
+
+
+/* ================= Small Scrren About Us PAge ======================= */
+
+
+
+@media only screen and (min-width:0px) and (max-width:399px) {
+
+body{
+    margin: 0px;
+    padding: 0px;
+}
+#head {
+    height: auto;
+    padding: 20px;
+    box-shadow: 0px 0px 10px 2px grey;
+    background-image: url("https://www.publicdomainpictures.net/pictures/240000/nahled/cupcakes-on-a-tray.jpg");
+    background-size:cover;
+}
+.name_head{
+    margin-left: 20%;
+    margin-top: 10px;  
+}
+.img_head{
+    width: 100%;
+    margin-bottom: 0px;
+}
+
+#name{
+    /* background-color: hotpink; */
+    margin: 0% 0% 0% 5%;
+    height: 1250px;
+}
+
+.name_header{
+    width: 60%;
+    /* background-color: white; */
+}
+
+
+
+.name_para{
+    /* background-color:     indianred; */
+    font-size: 13px;
+
+}
+.photo{
+    /* background-color: #b3b3b38e; */
+    display: grid;
+    grid-template-columns: (1,1fr);
+    grid-template-rows: repeat(4,1fr);
+    width: 70%;
+    height: 1000px;
+    grid-gap: 10px;
+    grid-template-areas: 
+    "a"
+    "b"
+    "c"
+    "d";
+}
+.photo :nth-child(1) {
+    margin-left:30px;
+    grid-area: "a";   
+}
+
+.photo :nth-child(2) {
+    margin-left:30px;
+    grid-area: "b";   
+}
+.photo :nth-child(3) {
+    grid-area: "c";
+    margin-left:30px;
+}
+.photo :nth-child(4) {
+    grid-area: "d";
+    margin-left:30px;
+}
+
+
+#mission{
+    height: auto;
+    margin-left: 15%;
+}
+.mission_name{
+    font-family: 'Fira Sans', sans-serif;
+}
+.mission_para{
+    height: auto;
+    padding: 0% 5% 0% 5%;
+    font-size: 17px;
+}
+
+.quote{
+    height: 40%;
+    width: 80%;
+    /* background-color: grey; */
+    padding: 10%;
+    border-radius: 25px;
+    border: 2px solid  8EC038;
+    text-align: center;
+    align-items: center;
+    margin-top: 70px;
+}
+}
