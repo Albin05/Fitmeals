@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fitmeals</title>
     <link rel="stylesheet" href="nav.css">
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="home.css">
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran&family=Fira+Sans:wght@700&family=Sacramento&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/cb4c3d70f3.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <!-- Navbar start -->
     <div class="nav-top">
         <div class="left">
             <i class="fas fa-map-marker-alt yg"></i>
@@ -20,26 +22,277 @@
             <p>fitmealsindia@gmail.com</p>
         </div>
         <div class="right">
-            <i class="fas fa-search"></i>
-            <i class="far fa-user"></i>
-            <i class="fas fa-shopping-bag"></i>
+            <i class="fas fa-search focus"></i>
+            <i class="far fa-user focus" onclick="window.location.href='login.html'"></i>
+            <i class="fas fa-shopping-bag focus" onclick="window.location.href='cart.html'"></i>
         </div>
     </div>
     <div class="nav-main">
         <div class="nav-left">
             <img src="https://www.fitmeals.co.in/wp-content/uploads/2019/06/logo-black.png" alt="logo">
         </div>
-        <div class="nav-mid">
+        <button class="hamburger" id="hamburger">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="nav-mid" id="nav-mid">
             <p>Home</p>
-            <p>Meal Plans ></p>
+            <div class="dropdown">
+                <button class="dropbtn">Meal plans ></button>
+                <div class="dropdown-content">
+                  <a href="#">Weight Loss Meal Plan</a>
+                  <a href="#">Maintenance Meal Plan</a>
+                  <a href="#">Athletic Meal Plan</a>
+                  <a href="#">Keto Meal Plan</a>
+                  <a href="#">Transformation Challenges</a>
+                </div>
+            </div>
             <p>Health coaching</p>
-            <p>Products ></p>
+            <div class="dropdown">
+                <button class="dropbtn">Products ></button>
+                <div class="dropdown-content">
+                  <a href="#">Vegan Sweets</a>
+                  <a href="lowcal.html">Low-Cal Sauces</a>
+                  <a href="#">Nut Butters</a>
+                  <a href="#">Fresh Bakes</a>
+                </div>
+            </div>
             <p>Blog</p>
-            <p>About Us ></p>
+            <div class="dropdown">
+                <button class="dropbtn">About Us ></button>
+                <div class="dropdown-content">
+                  <a href="#">Our story</a>
+                  <a href="#">FAQ</a>
+                  <a href="#">Testimonials</a>
+                </div>
+            </div>
         </div>
         <div class="nav-right">
             <p>Call: 9100347480</p>
         </div>
     </div>
+    <!-- Navbar end -->
+    <!-- Home page slider-->
+    <div class="slider">
+        <div class="load">
+            <!-- --- -->
+            </div>
+          <div class="content">
+              <div class="text box">
+                  <h2 class="the-head">Who Says Eating Healthy is boring?</h2>
+                     <div class="btns">
+                        <span class="btn">Learn more</span>
+                        <span class="btn plans">View plans</span>
+                     </div>
+                  </div>
+              </div>	
+          </div>
+    </div>
+    <!-- Home page slider-->
+    <!-- Second row start -->
+    <div id="container">
+        <div class="heading-2row">
+            <h1>It's not just food,</h1>
+            <h1 id="yg">It's a lifestyle!</h1>
+            <p>We break the stereotype ‘healthy eating is boring”. Reach your weight, health and workout goals with deliciously healthy food. We have various diet plans customised to suit your specific health and weight requirements. With a new changing menu every week, we bring to you food from various cuisines, with a healthy twist. We make healthy eating fun and effortless!</p>
+            <div class="btns">
+                <span class="btn">Read more</span>
+             </div>
+        </div>
+        <div class="herbs-image">
+            <img src="https://www.fitmeals.co.in/wp-content/uploads/2019/10/health-bottle-cut.jpg" alt="">
+        </div>
+        <div class="text-2row">
+            <i class="fas fa-check  fa-2x yg"><span>Custom tailored diet plans.</span></i>
+            <i class="fas fa-check  fa-2x yg"><span>Free from refined sugars & trans fats.</span></i>
+            <i class="fas fa-check  fa-2x yg"><span>Different menu every day.</span></i>
+            <i class="fas fa-check  fa-2x yg"><span>Flexibility of plans</span></i>
+            <i class="fas fa-check  fa-2x yg"><span>Ongoing nutritionist support.</span></i>
+        </div>
+    </div>
+    <!-- Second row end -->
+    <!-- Third row start -->
+    <div id="container2">
+        <div class="cont2-head">
+            <p class="bnfts yg">Our benefits</p>
+            <h1 class="headings">So Why Choose Fitmeals?</h1>
+            <p class="fit">Fitmeals is not a diet system that promotes cleanses, pills, preserved foods or any kind of disordered eating habits. We’re all about wholesome & nourishing foods that make you feel the best version of yourself. .</p>
+        </div>
+        <div class="cont2-body">
+            <div class="boxes">
+                <div class="circles"><i class="fas fa-shopping-basket fa-3x"></i></div>
+                <h2>Fresh ingredients</h2>
+                <p class="fit">Procuring fresh and fundamental ingredients required for a wholesome meal.</p>
+            </div>
+            <div class="boxes">
+                <div class="circles"><i class="fas fa-star fa-3x"></i></div>
+                <h2>Finest quality</h2>
+                <p class="fit">All the meals are designed by our nutrition experts using only the best quality ingredients.</p>
+            </div>
+            <div class="boxes">
+                <div class="circles"><i class="fas fa-motorcycle fa-3x"></i></div>
+                <h2>On time delivery</h2>
+                <p class="fit">Helping you stay ahead of your diet plans.</p>
+            </div>
+            <div class="boxes">
+                <div class="circles"><i class="fas fa-check fa-3x"></i></div>
+                <h2>Preservative-free</h2>
+                <p class="fit">Your ultimate plan for eating clean without added preservatives.</p>
+            </div>
+        </div>
+        <div class="plate">
+            <img width="100%" src="https://www.fitmeals.co.in/wp-content/uploads/2019/10/plate_rounded.jpg" alt="">
+        </div>
+    </div>
+    <!-- Third row end -->
+    <!-- Fourth row start -->
+    <div id="container3">
+        <div class="meal-box">
+            <div>
+                <p class="bnfts yg">Hungry Yet?</p>
+                <h1 class="headings">Choose your Meal Plan</h1> 
+            </div>
+            <div class="meals">
+                <button class="weight-btn">Weight loss Meal</button>
+                <p>Athletic Meal Plan</p>
+                <p>Maintenance Meal Plan</p>
+                <p>Keto Meal Plan</p>
+            </div>
+            <div class="food">
+                <img class="food-img" src="https://www.fitmeals.co.in/wp-content/uploads/2021/05/weight.jpg" alt="">
+                <div class="food-content">
+                    <h4 id="food-hdng">Weight Loss Meal Plan</h4>
+                    <p id="food-text">1200-1400 kcal</p>
+                    <p class="fit">If your aim is to lose weight in a gradual, healthy manner then this diet would meet your requirements. The meals are well balanced and consist of complex carbohydrates, lean protein, healthy fats and generous portions of fruits and vegetables which add all the essential vitamins, minerals and fibre to your diet.</p>
+                    <div class="btns">
+                        <span class="btn2">View plan</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fourth row end -->
+
+    <!-- Fifth row start -->
+    <div class="trial">
+        <p class="headings">Not convinced yet?</p>
+        <p class="headings">Get our <span class="yg">1 week trial plan</span></p>
+        <div class="btns">
+            <span class="btn3">Order now</span>
+        </div>
+    </div>
+    <!-- Fifth row end -->
+
+    <!-- Sixth row start -->
+    <div class="diet">
+        <div class="diet-content">
+            <h2 class="headings yg">Diet Plans</h2>
+            <h2 class="headings">The Ultimate DIY Meal Guide</h2>
+            <p class="fit">Say goodbye to crash diets and give us the opportunity to create highly tailored plans that suit your body type and food preferences distinctively. Just give us your details and goals and we’ll do all the meal planning for you!</p>
+            <div class="btns">
+                <span class="btn3">Coming Soon</span>
+            </div>
+        </div>
+        <div class="diet-image">
+            <img src="https://www.fitmeals.co.in/wp-content/uploads/2019/02/dish_07-1-360x360-1-300x300.jpg" alt="">
+        </div>
+    </div>
+    <!-- Sixth row start -->
+
+    <!-- Seventh row start -->
+    <p class="bnfts align">Client Diaries</p>
+    <div class="diaries">
+        <div>
+            <img width="100%" src="https://www.fitmeals.co.in/wp-content/uploads/2021/05/8B7C0945-E90C-46E1-9B35-B67136929EDE-2.jpg" alt="">
+        </div>
+        <div>
+            <img width="100%" src="https://www.fitmeals.co.in/wp-content/uploads/2021/05/1A9918ED-6807-4364-A47A-A5C61958643A-2-787x1024.jpg" alt="">
+        </div>
+        <div>
+            <img width="100%" src="https://www.fitmeals.co.in/wp-content/uploads/2021/05/52383BDD-D644-454A-AC1D-50E2DF6B7AF6-2.jpg" alt="">
+        </div>
+    </div>
+    <!-- Seventh row end -->
+
+    <!-- eighth row start -->
+    <div class="testimonials">
+        <p class="bnfts yg">Testimonials</p>
+        <h1 class="headings">What our clients say</h1>
+        <p class="quotes yg">"</p>
+        <p class="fit size">The perfect combination of healthy and delicious food. Fitmeals made sure that I reach my fitness and weight goals with frequent follow up calls from the nutritionist who made sure to always check on the progress. Excellent service, really happy with the resutls.</p>
+        <img src="https://www.fitmeals.co.in/wp-content/uploads/2021/05/12-01-96x96.png" alt="">
+        <p class="cname">Sanjana Devulapally</p>
+        <img class="onion" width="100%" src="https://www.fitmeals.co.in/wp-content/uploads/2019/10/testimonials-bg.png" alt="">
+    </div>
+    <!-- eighth row end -->
+
+    <!-- Ninth row start -->
+    <div class="mailing">
+        <div class="mailing-sub">
+            <h1 class="headings">Join our <span class="white">mailing list</span></h1>
+            <p class="fit">Subscribe to our newsletter to stay up to date with our discounts, new products, recipes & nutrition tips.</p>
+            <div class="email-input">
+                <input id="email-list" type="email" placeholder="Your email ..." value=""><span class="btn4" onchange="emailsub()">Subscribe</span>
+            </div>
+        </div>
+    </div>
+    <!-- Ninth row end -->
+    <!-- Tenth row start-->
+    <div class="articles">
+        <p class="bnfts yg">Food blog</p>
+        <h1 class="headings">Recent articles</h1>
+        <div id="articles">
+            <div class="art-grid">
+                <div id="image1" >
+                    <button class="article-button">Uncategorized</button>
+                </div>
+                <div class="text-gridd">
+                    <h3>Fitmeals India Collaboration With Nestle a+ Grekyo</h3>
+                    <p class="fit">We’re excited to announce our collaboration with Nestle a+. Now you can get a Nestle a+ Grekyo with every breakfast meal! Wh …</p>
+                </div>
+                <div class="date_comments">
+                    <i class="fas fa-calendar-alt yg h-icon"></i>
+                    <p class="fit">June 16, 2021</p>
+                    <i class="far fa-comment-dots yg h-icon"></i>
+                    <p class="fit">0 comments</p>
+                </div>
+            </div>
+            <div class="art-grid">
+                <div id="image2" class="top">
+                    <button class="article-button">Nutrition</button>
+                </div>
+                <div class="text-gridd">
+                    <h3>5 reasons why you should eat mangoes- Myth busting Mondays</h3>
+                    <p class="fit">The mango season is nearing an end right now and if for any reason you’ve avoided mangos like a plague then this article is just for...</p>
+                </div>
+                <div class="date_comments">
+                    <i class="fas fa-calendar-alt yg h-icon"></i>
+                    <p class="fit">June 7, 2021</p>
+                    <i class="far fa-comment-dots yg h-icon"></i>
+                    <p class="fit">0 comments</p>
+                </div>
+            </div>
+            <div class="art-grid">
+                <div id="image3" class="top">
+                    <button class="article-button">Nutrition</button>
+                </div>
+                <div class="text-gridd">
+                    <h3>A guide to clean bulking</h3>
+                    <p class="fit">Want to gain weight or build muscle? The only solution is to eat surplus. Contrary to what most people think, it’s actually very har … </p>
+                </div>
+                <div class="date_comments">
+                    <i class="fas fa-calendar-alt yg h-icon"></i>
+                    <p class="fit">May 26, 2021</p>
+                    <i class="far fa-comment-dots yg h-icon"></i>
+                    <p class="fit">0 comments</p>
+                </div>
+            </div>
+        </div>
+        <div class="btns">
+            <span class="btn3">Read more</span>
+        </div>
+    </div>
+    <!-- Tenth row end-->
+
 </body>
 </html>
+<script src="nav.js"></script>

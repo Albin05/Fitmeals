@@ -1,0 +1,563 @@
+/* sliding */
+.slider {
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  animation: slide 20s infinite;
+}
+
+@keyframes slide {
+  0% {
+    background-image: url("https://miro.medium.com/max/1400/1*M4oU5Uc5wliB_Qm0pD1BLg.jpeg");
+  }
+  20% {
+    background-image: url("https://miro.medium.com/max/1400/1*M4oU5Uc5wliB_Qm0pD1BLg.jpeg");
+  }
+  20.01% {
+    background-image: url("https://cateringpoziomka.pl/wp-content/uploads/2018/02/SLIDE_02.jpg");
+  }
+  40% {
+    background-image: url("https://cateringpoziomka.pl/wp-content/uploads/2018/02/SLIDE_02.jpg");
+  }
+  40.01% {
+    background-image: url("https://www.dandy-house.co.jp/assets/img/sites/3/849e98034b58dbe8314089aba2718fe0.jpg");
+  }
+  60% {
+    background-image: url("https://www.dandy-house.co.jp/assets/img/sites/3/849e98034b58dbe8314089aba2718fe0.jpg");
+  }
+  60.01% {
+    background-image: url("https://smartrobotichome.com/wp-content/uploads/2019/12/Arlo-Pro-2-mobile-app.png");
+  }
+  80% {
+    background-image: url("https://smartrobotichome.com/wp-content/uploads/2019/12/Arlo-Pro-2-mobile-app.png");
+  }
+  80.01% {
+    background-image: url("https://miro.medium.com/max/1400/1*M4oU5Uc5wliB_Qm0pD1BLg.jpeg");
+  }
+  100% {
+    background-image: url("https://miro.medium.com/max/1400/1*M4oU5Uc5wliB_Qm0pD1BLg.jpeg");
+  }
+  100.01% {
+    background-image: url("https://cateringpoziomka.pl/wp-content/uploads/2018/02/SLIDE_02.jpg");
+  }
+  1020% {
+    background-image: url("https://cateringpoziomka.pl/wp-content/uploads/2018/02/SLIDE_02.jpg");
+  }
+}
+.load {
+  position: absolute;
+  animation: slide 2s;
+}
+.content {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(1px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.text.box {
+  width: 80%;
+}
+.the-head {
+  text-align: center;
+  font-size: 70px;
+  color: #fff;
+  font-family: "Fira Sans", sans-serif;
+}
+.btns {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  justify-content: center;
+}
+.btn {
+  height: 45px;
+  width: 200px;
+  border-radius: 30px;
+  padding-top: 20px;
+  color: white;
+  font-size: 18px;
+  margin: 20px;
+  text-align: center;
+  font-family: "Fira sans", sans-serif;
+  background-color: #292d35;
+  cursor: pointer;
+}
+.btn.plans {
+  background-color: #8ec038;
+}
+.btn:hover {
+  background-color: #8ec038;
+}
+.plans:hover {
+  color: #8ec038;
+  background-color: white;
+}
+
+/* 2nd row */
+#container {
+  margin: auto;
+  margin: 150px;
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-gap: 60px;
+}
+.heading-2row > h1 {
+  color: #292d35;
+  font-size: 48px;
+  font-family: "Fira sans", sans-serif;
+}
+.heading-2row > p {
+  color: #33374b;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+#yg {
+  color: #8ec038;
+}
+.yg {
+  color: #8ec038;
+}
+.text-2row {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.text-2row span {
+  color: black;
+  font-family: "Fira sans", sans-serif;
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 1375px) {
+  #container {
+    margin: 150px;
+    grid-template-columns: repeat(1, auto);
+  }
+}
+@media screen and (max-width: 900px) {
+  #container {
+    margin: 50px;
+    grid-template-columns: repeat(1, auto);
+  }
+}
+@media screen and (max-width: 400px) {
+  #container {
+    grid-template-columns: repeat(1, 250px);
+  }
+}
+/* Third row */
+
+#container2 {
+  width: 100%;
+  height: 1000px;
+  background-color: #f3f5ed;
+  padding-top: 100px;
+  overflow: hidden;
+}
+.cont2-head {
+  width: 90%;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 50px;
+}
+.bnfts {
+  font-size: 40px;
+  margin: 10px;
+  font-family: "Sacramento", cursive;
+}
+.headings {
+  font-family: "Fira sans", sans-serif;
+  font-size: 46px;
+  margin: 10px;
+}
+
+.fit {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  color: gray;
+}
+.cont2-body {
+  display: grid;
+  width: 65%;
+  margin: auto;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 35px;
+}
+.boxes {
+  text-align: center;
+}
+.circles {
+  height: 100px;
+  width: 100px;
+  margin: auto;
+  border-radius: 50%;
+  background-color: #8ec038;
+}
+.circles > i {
+  color: white;
+  margin-top: 25px;
+}
+.boxes > h2 {
+  font-family: "Fira sans", sans-serif;
+}
+.plate {
+  margin: auto;
+  width: 80%;
+  overflow: hidden;
+  margin-top: 150px;
+  justify-content: center;
+}
+@media screen and (max-width: 1200px) {
+  .cont2-body {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 850px) {
+  .cont2-body {
+    grid-template-columns: repeat(1, auto);
+  }
+  #container2 {
+    height: 1400px;
+  }
+}
+
+/* Fourth row */
+
+#container3 {
+  width: 100%;
+  background-color: #8ec038;
+  border: 1px solid yellowgreen;
+}
+.meal-box {
+  background-color: white;
+  text-align: center;
+  width: 60%;
+  margin: auto;
+  margin-top: 200px;
+  margin-bottom: 150px;
+  padding: 80px;
+  border-radius: 25px;
+}
+.meals {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 50px;
+}
+.weight-btn {
+  width: 250px;
+  height: 50px;
+  background-color: white;
+  color: yellowgreen;
+  font-family: "Fira sans", sans-serif;
+  font-size: 16px;
+  border: 2px solid yellowgreen;
+  border-radius: 25px;
+}
+.meals > p {
+  font-family: "Fira sans", sans-serif;
+  font-size: 16px;
+  border: 0px;
+  padding: 10px;
+  margin: 0px;
+}
+.food {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.food-img {
+  width: 45%;
+  margin: auto;
+  border-radius: 25px;
+}
+#food-hdng {
+  font-family: "Fira sans", sans-serif;
+  font-size: 24px;
+  margin: 10px;
+}
+#food-text {
+  font-family: "Fira sans", sans-serif;
+  font-size: 14px;
+  color: yellowgreen;
+}
+.food-content {
+  width: 50%;
+  padding: 25px;
+}
+.btn2 {
+  height: 45px;
+  width: 200px;
+  border-radius: 35px;
+  padding-top: 20px;
+  color: white;
+  font-size: 18px;
+  margin: 20px;
+  text-align: center;
+  font-family: "Fira sans", sans-serif;
+  background-color: red;
+  cursor: pointer;
+}
+.btn2:hover {
+  background-color: black;
+}
+@media screen and (max-width: 800px) {
+  .meal-box {
+    padding: 0px;
+  }
+  .food-content {
+    width: 90%;
+  }
+  .food-img {
+    width: 75%;
+  }
+}
+
+/* Fifth row */
+
+.trial {
+  padding: 40px;
+  background-image: url(https://elements-preview-images-0.imgix.net/4d269aa0-3a59-45de-8fc6-0ec17bc00a65?auto=compress%2Cformat&fit=max&w=1370&s=a345e319c1cfcd1a3b2261d2de3566df);
+  border-top: 1px solid yellowgreen;
+}
+.trial > p {
+  color: white;
+  text-align: center;
+}
+.btn3 {
+  height: 45px;
+  width: 200px;
+  border-radius: 30px;
+  padding-top: 20px;
+  color: white;
+  font-size: 18px;
+  margin: 20px;
+  text-align: center;
+  font-family: "Fira sans", sans-serif;
+  background-color: red;
+  cursor: pointer;
+}
+.btn3:hover {
+  background-color: yellowgreen;
+}
+
+/* Sixth row */
+
+.diet {
+  padding-top: 70px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 70%;
+  margin: auto;
+}
+.diet-content {
+  width: 38%;
+}
+.diet-content > h2 {
+  font-size: 24px;
+  margin-left: 0px;
+}
+@media screen and (max-width: 720px) {
+  .diet-content {
+    margin: auto;
+    width: 80%;
+  }
+}
+
+/* Seventh row */
+
+.align {
+  text-align: center;
+  margin-top: 100px;
+}
+.diaries {
+  display: grid;
+  margin-bottom: 100px;
+  justify-content: center;
+  grid-template-columns: repeat(3, 300px);
+  grid-gap: 20px;
+}
+
+@media screen and (max-width: 960px) {
+  .diaries {
+    grid-template-columns: repeat(1, 300px);
+  }
+}
+
+/* eight row */
+
+.testimonials {
+  margin: auto;
+  padding: 100px 0px 0px 0px;
+  text-align: center;
+  background-color: #f3f5ed;
+}
+.quotes {
+  font-family: "Catamaran", sans-serif;
+  font-size: 200px;
+  padding: -50px;
+  margin: -50px;
+  margin-bottom: -170px;
+}
+.size {
+  width: 70%;
+  margin: auto;
+  margin-bottom: 50px;
+  font-style: italic;
+}
+.cname {
+  font-family: "Fira sans", sans-serif;
+  font-size: 16px;
+  border: 0px;
+  padding: 10px;
+  margin: 0px;
+}
+
+.onion {
+  width: 100%;
+}
+
+/* Ninth row */
+
+.mailing {
+  background-color: #8ec038;
+  margin-top: -20px;
+  padding: 50px 30px 100px 30px;
+}
+.mailing-sub {
+  margin: auto;
+  width: 70%;
+  text-align: center;
+}
+.white {
+  color: white;
+}
+.email-input {
+  display: flex;
+  justify-content: center;
+}
+#email-list {
+  border: 0px;
+  height: 55px;
+  width: 300px;
+  border-radius: 35px;
+}
+.btn4 {
+  height: 36px;
+  width: 200px;
+  margin-left: -50px;
+  border-radius: 35px;
+  padding-top: 20px;
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  font-family: "Fira sans", sans-serif;
+  background-color: red;
+  cursor: pointer;
+}
+.btn4:hover {
+  background-color: black;
+}
+.articles {
+  text-align: center;
+}
+
+/* Tenth */
+.articles {
+  padding: 100px 0px 100px 0px;
+}
+#articles {
+  width: 80%;
+  margin: auto;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(3, 33%);
+}
+.art-grid {
+  border-radius: 35px;
+}
+#image1 {
+  background-image: url("https://www.fitmeals.co.in/wp-content/uploads/2021/06/unnamed.jpg%22");
+  background-size: cover;
+  height: 300px;
+  border-radius: 35px 35px 0 0;
+}
+#image2 {
+  background-image: url("https://www.fitmeals.co.in/wp-content/uploads/2021/06/mangoes-1320111_640.jpg%22");
+  background-size: cover;
+  height: 300px;
+  border-radius: 35px 35px 0 0;
+}
+#image3 {
+  background-image: url("https://www.fitmeals.co.in/wp-content/uploads/2021/05/man-461195_640.jpg%22");
+  background-size: cover;
+  height: 300px;
+  border-radius: 35px 35px 0 0;
+}
+.date_comments {
+  border-top: 2px solid white;
+  border-radius: 0 0 35px 35px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  background-color: #f3f5ed;
+}
+.text-gridd {
+  padding: 30px;
+  background-color: #f3f5ed;
+}
+.text-gridd > h3 {
+  text-align: center;
+  margin: 10px;
+  font-family: "Fira sans", sans-serif;
+}
+.text-gridd > p {
+  font-size: small;
+  text-align: center;
+}
+.article-button {
+  background-color: #8ec038;
+  border-radius: 50px;
+  border: none;
+  width: 50%;
+  height: 50px;
+  color: white;
+  font-size: 16px;
+  font-family: "Fira sans", sans-serif;
+  margin-top: 275px;
+}
+.h-icon {
+  margin: 14px 10px 30px 60px;
+}
+@media screen and (max-width: 1200px) {
+  #articles {
+    justify-content: center;
+    grid-template-columns: repeat(1, 50%);
+  }
+}
+@media screen and (max-width: 881px) {
+  #articles {
+    grid-template-columns: repeat(1, 70%);
+  }
+}
+@media screen and (max-width: 625px) {
+  .articles {
+    padding: 100px 30px 100px 30px;
+  }
+  #articles {
+    grid-template-columns: repeat(1, 90%);
+  }
+}
+@media screen and (max-width: 625px) {
+  #articles {
+    width: 98%;
+    grid-template-columns: repeat(1, 100%);
+  }
+}
