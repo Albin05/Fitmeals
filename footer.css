@@ -3,10 +3,22 @@
 /* ============================================                FOOOTER                   ================================================ */
 
 /*------------------------------------------------------ FOOTER = FULL Screen 721 above ---------------------------------------------------*/
-body {
+#footer_body {
+    
     position: relative;
     padding-bottom: 70vh;
+    /* background-color: #8EC038; */
 
+}
+.footer_img{
+    /* background-color: #8EC038; */
+    width: 200px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: 0.2s ease-out;
+    cursor: pointer;
+}
+.footer_img:hover {
+    transform: translateY(20px);
 }
 
 footer {
@@ -14,8 +26,8 @@ footer {
     max-height: 250vh;
     background-color: black;
     color: white;
-    position: absolute;
-    padding-bottom: 50px;
+    
+    padding-bottom: 10px;
     bottom: 0;
     text-align: center;
 }
@@ -27,7 +39,7 @@ footer {
     grid-template-areas:
         "a b c d";
     width: 70vw;
-    height: 30vw;
+    height: 50vw;
     /* background-color: chartreuse; */
     padding-top: 40px;
 
@@ -88,7 +100,7 @@ footer {
 }
 
 #footer_box>div:nth-child(4) {
-
+    height: auto;
     background-color: black;
     padding-left: 60px;
     padding-right: 20px;
@@ -100,7 +112,7 @@ footer {
     grid-area: d;
 }
 
-.icon {
+.footer_icon {
     font-size: 25px;
 }
 
@@ -136,7 +148,7 @@ footer {
 
 
  @media only screen and (min-width:321px) and (max-width:721px) {
-    body {
+    #footer_body {
         position: relative;
         padding-bottom: 450px;
     }
@@ -161,7 +173,7 @@ footer {
         width: 250px;
       
     }
-    img{
+    .footer_img{
         width: 250px;
     }
     
@@ -204,7 +216,7 @@ footer {
   /*      footer   samll    Screen      */
 
   @media only screen and (min-width:0px) and (max-width:320px) {
-    body {
+    #footer_body {
         position: relative;
         padding-bottom: 850px;
         
@@ -219,7 +231,7 @@ footer {
     #footer_box {
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(2,1fr);
-        background-color: white;
+        background-color: black;
         grid-template-areas:
             "a a a a"
             "c c c c";
@@ -232,12 +244,13 @@ footer {
         font-size: 16px;
         color: cornsilk;
         height: 300px;
-        width: 250px;
+        width: 200px;
         transition: 0.5s;
         font-weight: bold;
     }
-    img{
+    .footer_img{
         width: 220px;
+        /* background-color: #8EC038; */
     }
     
     
