@@ -128,11 +128,11 @@
 </html>
 <script>
     var cartArr=JSON.parse(localStorage.getItem("CartItems"));
-    
+
      var promo=document.getElementById("mytext")
      function submit(){
-         if(promo.value=="MASAI30" || promo.value=="SANDEEP007"){
-             var discount=total/30;
+         if(promo.value="FITMEALS30" || promo.value=="SANDEEP007"){
+             var discount= Math.floor(total/3.3);
              total=total-discount;
             
              document.querySelector("h2").textContent=`Total amount is ₹ ${Math.floor(total)}`
