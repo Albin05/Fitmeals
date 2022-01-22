@@ -129,25 +129,21 @@ footer {
 }
 
 /*------------------------------------------------- FOOTER = MEDIUM SCREEN  (321 to 720) -------------------------------------- */
-@media screen and (max-width: 1110px){
-  #footer_box {
-    width: 90%;
-  }
-}
+
 @media only screen and (min-width: 451px) and (max-width: 1050px) {
-  #footer_body {
+  /* #footer_body {
     position: relative;
-  }
-  /* footer {
-        height: 380px;
-        background-color: black;
-    } */
+  } */
+  footer {
+        width: 100%;
+    }
   #footer_box {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(1, 1fr);
     grid-template-areas: "a a a a a a c c c c c c";
     height: 280px;
     padding: 50px;
+    width: 100%;
   }
 
   #footer_box > div:nth-child(1) {
@@ -196,10 +192,10 @@ footer {
 /*      Footer    Screen      */
 /*      footer   samll    Screen      */
 
-@media only screen and (min-width: 0px) and (max-width: 320px) {
+@media only screen and (min-width: 0px) and (max-width: 450px) {
   #footer_body {
     position: relative;
-    padding-bottom: 850px;
+    /* padding-bottom: 850px; */
   }
 
   footer {

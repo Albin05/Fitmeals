@@ -19,7 +19,7 @@
       margin: 2% 10% 1% 2%;
       font-size: 90%;
   }
-  div {
+  #main_page {
       width: 100%;
       padding: 40px 0;
       background-color: white;
@@ -30,6 +30,8 @@
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-size: 100%;
+    width: 100%;
+    padding: 40px 0;
   }
   #container {
     margin: auto;
