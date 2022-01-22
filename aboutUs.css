@@ -44,7 +44,7 @@ body{
 
 
 .name_para{
-    margin:auto;
+    margin: 40px auto;
     text-align: center;
     padding:0.5% 5% 0% 5%;
     width: 80%;
@@ -105,13 +105,11 @@ body{
     background-color: #F3F5ED;
     width: 70%;
     height: auto;
-    padding: 3%;
+    padding: 20px;
     text-align: center;
- 
     align-items: center;
-    margin: auto;
-    margin-top: 0px;
-
+    margin: 30px auto;
+    border-radius: 20px;
 }
 .mission_name{
     font-family: 'Fira Sans', sans-serif;
