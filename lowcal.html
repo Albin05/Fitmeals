@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Low Calories Products - Fitmeals</title>
+    <style>
+        * {
+            font-family:'Open Sans', sans-serif;
+        }
+
+#container{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 60px;
+            
+
+
+           
+        
+        }
+        @media only screen and (min-width:0px) and (max-width:320px){
+           #container{
+               
+                grid-template-columns: repeat(1,1fr);
+                
+            }
+        } 
+        @media only screen and (min-width:321px) and (max-width:720px){
+           #container{
+               
+                grid-template-columns: repeat(2,1fr);
+                
+                
+            }
+        }
+       
+        #heading{
+            width:100%;
+            height:300px;
+           background-color: rgb(41,45,53);
+        }
+        #heading>h1{
+            text-align: center;
+            color: white;
+            padding-top: 120px;
+            font-size: 50px;
+        }
+        
+        body>#heading{
+                    margin-bottom: 100px;
+        }
+       
+
+
+        button{
+            margin-bottom: 100px;
+            margin-left: 50px;
+            width: 200px;
+            height: 50px;
+            font-size: 2rem;
+            border-radius: 20px;
+            color: white;
+            background-color: rgb(255, 0, 68);
+            border: none;
+            box-shadow:inset 0 0 0 #f9e506;
+            transition: ease-in-out 0.3s;
+            outline: none;
+
+        }
+        button:hover{
+            box-shadow: inset 200px 0 0 0 #f9e506 ;
+            cursor: pointer;
+            color:#000;
+        }
+        img{
+            box-shadow:rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            transition: 0.2s ease-out;
+            margin-right: 10px;
+        }
+        img:hover{
+            transform: translateY(20px);
+        }
+        h2{
+            transition: 0.5s;
+        }
+        h2:hover{
+            color: forestgreen;
+            cursor: pointer;
+        }
+        select{
+            
+           width: 200px;
+            height: 69px;
+            border-radius: 30px;
+            font-size: 15px;
+            
+
+        }
+        #sorted{
+            display: flex;
+            justify-content: space-between;
+            width: 65%;
+            
+            margin-bottom: 100px;
+            margin-top: 0;
+            position: relative;
+            float: right;
+            height: 70px;
+            border-radius: 30px;
+            background-color: lightgray;
+            
+        }
+        p{
+            margin-left: 20px;
+            font-size: 20px;
+        }
+        @media only screen and (min-width:0px) and (max-width:320px){
+           body{
+               
+                display: grid;
+                
+            }
+        }
+        @media only screen and (min-width:321px) and (max-width:720px){
+           body{
+               
+                display: grid;
+                
+                
+            }
+        }
+        
+        
+        
+
+        
+      
+    </style>
+</head>
+<body>
+    
+    <div id="heading">
+    <h1>Low Calorie Sauces</h1></div>
+    <button onclick="window.location.href='cart.html'">Go to Cart</button>
+    <div id=sorted>
+        <p>Showing 1–8 results</p>
+          <select name="" id="PriceSort" onchange="SortPrices()">
+          <option value="">Default Sorting</option>
+          <option value="high">High to Low</option>
+          <option value="low">Low to High</option>
+      </select>
+      </div>
+    <div id="container">
+        
+      
+    </div>
+
+</body>
+</html>
+<script>
+   var cartArr=JSON.parse(localStorage.getItem("CartItems"))||[]
+    var images=JSON.parse(localStorage.getItem("images"))
+    displayData(images)
+
+    function SortPrices(){
+        var selected =document.querySelector("#PriceSort").value;
+        console.log(selected)
+        if(selected=="high"){
+            images.sort(function(a,b){
+                return Number(b.price)-Number(a.price)
+            })
+        }
+        if(selected=="low"){
+            images.sort(function(a,b){
+                return Number(a.price)-Number(b.price)
+            })
+        }
+        console.log(images)
+        
+       displayData(images)
+    }
+
+    function displayData(images){
+        document.querySelector("#container").innerHTML=""
+        images.map(function(food){
+        var div=document.createElement("div")
+       
+
+        var image=document.createElement("img")
+        image.setAttribute("src",food.image_url)
+        image.style.borderRadius="10px"
+        image.style.marginLeft="10px"
+        // image.style.boxShadow="rgba(100, 100, 111, 0.2) 0px 7px 29px 0px";
+        
+       
+        
+        
+
+        
+
+        var Name=document.createElement("h2")
+        Name.textContent=food.name
+        Name.style.textAlign="center"
+        
+
+        var detail=document.createElement("p")
+        detail.textContent=food.details;
+        detail.style.textAlign="center"
+
+        var prices=document.createElement("h3")
+        prices.textContent= "₹ "+food.price+".00"
+        prices.style.color="red";
+        prices.style.textAlign="center"
+        
+
+       
+        var btn=document.createElement("button");
+        btn.textContent="Add TO Cart";
+        btn.style.marginLeft="120px";
+       btn.style.fontSize="25px"
+        
+        
+        
+       
+       
+        btn.addEventListener("click",function(){
+            addToCart(food);
+
+
+            
+    });
+    div.append(image,Name,detail,prices,btn)
+           
+
+            document.querySelector("#container").append(div);
+
+     })
+   
+}
+
+   
+   
+   
+    
+
+   
+function addToCart(food){
+    cartArr.push(food);
+    localStorage.setItem("CartItems",JSON.stringify(cartArr))
+    alert("Added Successfully")
+    alert.style.borderRadius="100px"
+}
+</script>
