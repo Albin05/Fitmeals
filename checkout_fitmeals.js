@@ -51,5 +51,5 @@ checkoutArr.map(function(data) {
     document.querySelector("#sbmt").addEventListener("click", formSubmit);
 
     function formSubmit(event) {
-        window.location.href="confirmation.html";
+        window.location.href="orderplaced.html";
     }
