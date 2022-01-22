@@ -1,4 +1,5 @@
-var cartArr = JSON.parse(localStorage.getItem("cartItems"));
+var cartArr = JSON.parse(localStorage.getItem("CartItems"));
+console.log(cartArr);
 
     cartArr.map(function(data) {
     var tr = document.createElement("tr");
@@ -15,7 +16,7 @@ var cartArr = JSON.parse(localStorage.getItem("cartItems"));
 
     var qty = document.createElement("h5");
     qty.style.color = "rgb(91, 91, 91)";
-    qty.textContent = "Quantity : " + data.price;
+    qty.textContent = "Quantity : 500gm";
 
     td1.append(name, qty);
 

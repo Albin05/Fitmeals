@@ -6,15 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cart</title>
     <style>
-          #container{
+        * {
+            font-family:'Open Sans', sans-serif;
+        }
+        #container{
             display: grid;
             grid-template-columns: repeat(3,1fr);
             gap: 60px;
-            
-
-
-           
-        
         }
         img{
             box-shadow:rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -116,7 +114,7 @@
 <body>
     
     <div id="heading"><h1>CaRt</h1></div>
-   <div > <button id="btn" onclick="window.location.href='check out.html'">Check Out</button>
+   <div > <button id="btn" onclick="window.location.href='checkout_fitmeals.html'">Check Out</button>
     <input type="text" id="mytext"   placeholder="Apply PROMO">
     <button id=promo onclick="submit()">Submit</button>
 </div>
@@ -179,19 +177,9 @@ cartArr.map(function(food){
         prices.style.color="red";
         prices.style.textAlign="center"
 
-        div2.append(Name,detail,prices)
-      
-        
-        
-        
-       
-       
-       
+        div2.append(Name,detail,prices);
         div.append(image,div2)
         document.querySelector("#container").append(div);
-
-         
-        
     });
     var total=cartArr.reduce(function(ac,cv){
         return ac + Number(cv.price)
@@ -199,5 +187,4 @@ cartArr.map(function(food){
   
     document.querySelector("h2").textContent=`Total amount is ₹ ${total}`
   
-   
 </script>
