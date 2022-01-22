@@ -1,239 +1,222 @@
-
 /*=================================================== Large Product 01 721 above ===================================================     */
-body{
-    margin: 0;
+body {
+  margin: 0;
 }
 
 #main {
-
-    /* background-color: seagreen; */
-    display: grid;
-    grid-template-columns: 30% 75%;
-    margin: auto;
-    width: 1300px;
-    height: 1200px;
-
+  /* background-color: seagreen; */
+  display: grid;
+  grid-template-columns: 30% 75%;
+  margin: auto;
+  width: 1300px;
+  height: 1200px;
 }
 
 #card {
-    margin: auto;
-    margin-top: 20px;
+  margin: auto;
+  margin-top: 20px;
 }
 
 #container {
-    padding-top: 25px;
-    width: 90%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2%;
-    height: 97%;
-    margin-left: 5%;
-    text-align: center;
-
+  padding-top: 25px;
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2%;
+  height: 97%;
+  margin-left: 5%;
+  text-align: center;
 }
 
 #catergories {
-    margin-top: 40px;
-    height: 50%;
-    /* background-color: saddlebrown; */
+  margin-top: 40px;
+  height: 50%;
+  /* background-color: saddlebrown; */
 }
 
 #heading {
-    text-align: center;
-    background-color: rgb(41, 45, 53);
-    width: 150 0px;
-    height: 200px;
-    margin: auto;
-    color: white;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: center;
+  background-color: rgb(41, 45, 53);
+  width: 150 0px;
+  height: 200px;
+  margin: auto;
+  color: white;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-#heading>h1 {
-    padding-top: 80px;
+#heading > h1 {
+  padding-top: 80px;
 }
 
-img {
-    margin: auto;
-    width: 90%;
-    border-radius: 5%;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    transition: 0.2s ease-out;
-    cursor: pointer;
+#product-img {
+  margin: auto;
+  width: 90%;
+  border-radius: 5%;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transition: 0.2s ease-out;
+  cursor: pointer;
 }
 
-img:hover {
-    transform: translateY(20px);
+#product-img:hover {
+  transform: translateY(20px);
 }
 
 h2 {
-    transition: 0.5s;
-    font-weight: bold;
+  transition: 0.5s;
+  font-weight: bold;
 }
 
 h2:hover {
-    color: forestgreen;
-    cursor: pointer;
+  color: forestgreen;
+  cursor: pointer;
 }
 
 #sort {
-    margin: auto;
-    background-color: khaki;
-    width: 1500px;
-    height: 90px;
+  margin: auto;
+  background-color: khaki;
+  width: 1500px;
+  height: 90px;
 }
 
-button {
-    margin-bottom: 100px;
-    margin-left: 50px;
-    width: 200px;
-    height: 50px;
-    font-size: 2rem;
-    border-radius: 20px;
-    color: white;
-    background-color: rgb(255, 0, 68);
-    border: none;
-    box-shadow: inset 0 0 0 #f9e506;
-    transition: ease-in-out 0.3s;
-    outline: none;
-
+.button-anmt {
+  margin-bottom: 100px;
+  margin-left: 50px;
+  width: 200px;
+  height: 50px;
+  font-size: 2rem;
+  border-radius: 20px;
+  color: white;
+  background-color: rgb(255, 0, 68);
+  border: none;
+  box-shadow: inset 0 0 0 #f9e506;
+  transition: ease-in-out 0.3s;
+  outline: none;
 }
 
-button:hover {
-    box-shadow: inset 200px 0 0 #f9e506;
-    cursor: pointer;
-    color: black;
-
-
+.button-anmt:hover {
+  box-shadow: inset 200px 0 0 #f9e506;
+  cursor: pointer;
+  color: black;
 }
 
 #page_btn {
-    margin-left: 50%;
-    margin-top: 25px;
-    font-size: 20px;
-
+  margin-left: 50%;
+  margin-top: 25px;
+  font-size: 20px;
 }
 
-#page_btn>a {
-    display: inline-flex;
-    width: 60px;
-    height: 60px;
-    color: black;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    border-radius: 50%;
-    border: none;
-    text-decoration: none;
-    transition: background 0.4s;
-
+#page_btn > a {
+  display: inline-flex;
+  width: 60px;
+  height: 60px;
+  color: black;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 50%;
+  border: none;
+  text-decoration: none;
+  transition: background 0.4s;
 }
 
 .prod_1 {
-    background-color: #8EC038;
+  background-color: #8ec038;
 }
 
 .prod_2 {
-    background-color: #F3F5ED;
+  background-color: #f3f5ed;
 }
 
 .rounded_button {
-    background-color: #F3F5ED;
+  background-color: #f3f5ed;
 }
 
-#page_btn>a:hover {
-    background-color: black;
-    color: white;
+#page_btn > a:hover {
+  background-color: black;
+  color: white;
 }
 
-h3{
-    font-size: 25px;
-    color: tomato;
-
+h3 {
+  font-size: 25px;
+  color: tomato;
 }
-                         /* ------Sorte--------- */
-#sorted{
-    display: flex;
-    justify-content: space-between;
-    width: 55%;
-    margin-bottom: 5px;
-    margin-top: 20px;
-    position: relative;
-    float: right;
-    height: 70px;
-    border-radius: 30px;
-    background-color: lightgray;
-    
+/* ------Sorte--------- */
+#sorted {
+  display: flex;
+  justify-content: space-between;
+  width: 55%;
+  margin-bottom: 5px;
+  margin-top: 20px;
+  position: relative;
+  float: right;
+  height: 70px;
+  border-radius: 30px;
+  background-color: lightgray;
 }
-#sorted > p{
-    margin-left: 10px;
-    margin-top: 23px;
-    font-size: 15px;
+#sorted > p {
+  margin-left: 10px;
+  margin-top: 23px;
+  font-size: 15px;
 }
-select{
-            
-    width: 200px;
-     height: 69px;
-     border-radius: 30px;
-     font-size: 15px;
- }
+select {
+  width: 200px;
+  height: 69px;
+  border-radius: 30px;
+  font-size: 15px;
+}
 
+/* --------------------------------------------------SMALL screen = PRoduct 01 (0 to 320) ------------------------------------------------------*/
 
-
- /* --------------------------------------------------SMALL screen = PRoduct 01 (0 to 320) ------------------------------------------------------*/
-
-@media only screen and (min-width:0px) and (max-width:320px) {
-
-body{
+@media only screen and (min-width: 0px) and (max-width: 320px) {
+  body {
     width: 321px;
-}
+  }
 
-#card {
+  #card {
     font-size: 17px;
     width: 150px;
     height: 40px;
     margin-top: 10px;
     margin-left: 4%;
-}
+  }
 
-#container {    
+  #container {
     width: 10px;
-    margin-top:45px ;
+    margin-top: 45px;
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(6,1fr);
+    grid-template-rows: repeat(6, 1fr);
     margin-left: 7%;
-}
-#container > div{
+  }
+  #container > div {
     width: 250px;
     height: 550px;
     margin-bottom: 0px;
-}
-#heading {
+  }
+  #heading {
     width: 100%;
     height: 150px;
-}
+  }
 
-#heading>h1 {
+  #heading > h1 {
     padding-top: 50px;
-}
+  }
 
-img {
+  #product-img {
     border-radius: 5%;
-}
+  }
 
-
-button {
+  .button-anmt {
     margin-left: 0px;
     font-size: 1.3rem;
     border-radius: 50px;
-}
+  }
 
-h3{
+  h3 {
     font-size: 30px;
     color: tomato;
-
-}
-/* ------Sorte--------- */
-#sorted{
+  }
+  /* ------Sorte--------- */
+  #sorted {
     display: flex;
     justify-content: space-between;
     width: 80%;
@@ -246,106 +229,96 @@ h3{
     height: 45px;
     border-radius: 30px;
     background-color: lightgray;
-    
-    }
-    #price_sort{
-        height: 45px;
-    }
-    #sorted > p{
+  }
+  #price_sort {
+    height: 45px;
+  }
+  #sorted > p {
     margin-left: 10px;
     margin-top: 8px;
     font-size: 14px;
     text-align: center;
-    }
-    select{
-            
+  }
+  select {
     width: 200px;
-        height: 69px;
-        border-radius: 30px;
-        font-size: 15px;
-    }
-    
+    height: 69px;
+    border-radius: 30px;
+    font-size: 15px;
+  }
 }
 
 /*--------------------------------------------------- MEDIUM SCREEN for product 01 = 321 to 721 ----------------------------------------------*/
-             
-@media only screen and (min-width:321px) and (max-width:720px) {
 
-body{
+@media only screen and (min-width: 321px) and (max-width: 720px) {
+  body {
     width: 100%;
-}
-#card{
+  }
+  #card {
     font-size: 20px;
     width: 150px;
     height: 40px;
     margin-top: 10px;
     margin-left: 3%;
-}
-#container{
+  }
+  #container {
     padding: 1%;
     /* background-color: violet; */
     width: 88%;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3,1fr);
+    grid-template-rows: repeat(3, 1fr);
     row-gap: 1%;
-}
-#container > div{
+  }
+  #container > div {
     /* background-color: wheat; */
     width: 270px;
     height: 550px;
-}
-#heading{
+  }
+  #heading {
     width: 100%;
     height: 150px;
-}
-#heading>h1{
+  }
+  #heading > h1 {
     padding-top: 50px;
-}
-img {
+  }
+  #product-img {
     border-radius: 5%;
-}
+  }
 
-button {
+  .button-anmt {
     margin-left: 0px;
     font-size: 1.3rem;
     border-radius: 50px;
-}
-h3{
+  }
+  h3 {
     font-size: 25px;
     color: tomato;
-}
-/* ------Sorte--------- */
-#sorted{
-display: flex;
-justify-content: space-between;
-width: 55%;
-height: 45px;
-margin-bottom: 5px;
-margin-top: 10px;
-position: relative;
-float: right;
-height: 45px;
-border-radius: 30px;
-background-color: lightgray;
-
-}
-#price_sort{
+  }
+  /* ------Sorte--------- */
+  #sorted {
+    display: flex;
+    justify-content: space-between;
+    width: 55%;
     height: 45px;
-}
-#sorted > p{
-margin-left: 10px;
-margin-top: 13px;
-font-size: 15px;
-}
-select{
-        
-width: 200px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    position: relative;
+    float: right;
+    height: 45px;
+    border-radius: 30px;
+    background-color: lightgray;
+  }
+  #price_sort {
+    height: 45px;
+  }
+  #sorted > p {
+    margin-left: 10px;
+    margin-top: 13px;
+    font-size: 15px;
+  }
+  select {
+    width: 200px;
     height: 69px;
     border-radius: 30px;
     font-size: 15px;
+  }
 }
-
-}
-
-
-

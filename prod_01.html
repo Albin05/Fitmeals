@@ -187,6 +187,7 @@
         var div = document.createElement("div");
         var image = document.createElement("img");
         image.setAttribute("src", food.image_url);
+        image.setAttribute("id","product-img")
 
         var h2 = document.createElement("h2");
         h2.textContent = food.name;
@@ -199,6 +200,7 @@
 
         var btn = document.createElement("button");
         btn.textContent = "Add To Cart";
+        btn.setAttribute("class","button-anmt")
 
         btn.addEventListener("click", function () {
             addToCart(food)
