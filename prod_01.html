@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="prod_01.css">
+    <link rel="stylesheet" href="footer.css">
+    
+</head>
+
+<body>
+    <!--==============================================          PRoduct 01              =======================================================-->
+    <product01>
+        <div id="heading">
+            <h1>Vegan Sweets</h1>
+        </div>
+        <button id="card" onclick="window.location.href='home.html'">Go To Cart</button>
+        <div id="sorted">
+            <p>Showing 1-6 results</p>
+            <select id="price_sort" onchange="sort_price()">
+            <option value="">Default sorting</option>
+            <option value="High">High to Low</option>
+            <option value="Low">Low to High</option>
+            </select>
+
+        </div>
+        <div id="container"></div>
+    
+    </product01>
+    <!--==============================================          PRoduct 01              =======================================================-->
+
+    
+
+    <!--==============================================          FOOTER              =======================================================-->
+     <footer>
+
+        <div id="footer_box">
+            <div class="social">
+                <img onclick="window.location.href='card.html'"
+                    src="https://www.fitmeals.co.in/wp-content/uploads/2019/06/logo-white.png">
+                <p>The Fitmeals culinary team consists of very<br> passionate and skilled chefs.<br> Our team is well
+                    versed in nutrition and all our menus and plans are designed by qualified nutrition experts.</p>
+                <div class="icon">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                    <ion-icon name="logo-twitter"></ion-icon>
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </div>
+            </div>
+            <div class="explore">
+                <h3 class="h3color">Explore</h3>
+                <h6>
+                    <ion-icon name="chevron-forward-outline"></ion-icon>Home
+                </h6>
+
+            </div>
+            <div class="links">
+                <h3 class="h3color">Links</h3>
+                <h6>
+                    <ion-icon name="chevron-forward-outline"></ion-icon>About Us
+                </h6>
+                <h6>
+                    <ion-icon name="chevron-forward-outline"></ion-icon>Blog
+                </h6>
+
+            </div>
+            <div class="contact">
+                <h3 class="h3color">Contact Us:</h3>
+                <h5>
+                    <ion-icon name="call-outline"></ion-icon> Call Us:<br>
+                    <h6>9004322729</h6>
+                </h5>
+                <h5>
+                    <ion-icon name="mail-outline"></ion-icon> Email Us:<br>
+                    <h6>fitmealsindia@gmail.com</h6>
+                </h5>
+                <h5>
+                    <ion-icon name="location-outline"></ion-icon> Our Location:<br>
+                    <h6>Banjara Hills, Road no.5, Hyderabad</h6>
+                </h5>
+            </div>
+
+
+        </div>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </footer>
+    <!--==============================================          FOOTER              =======================================================-->
+
+
+</body>
+
+</html>
+
+<script>
+    var products = JSON.parse(localStorage.getItem("products"));
+
+    var cartArr = JSON.parse(localStorage.getItem("CartItems")) || [];
+
+    sort_stop(products);
+
+    function sort_price(){
+        var select = document.querySelector("#price_sort").value;
+        if(select == "High"){
+            products.sort(function(a,b){
+                return Number(b.price) - Number(a.price);
+            })   
+        }
+        if(select == "Low"){
+            products.sort(function(a,b){
+                return Number(a.price) - Number(b.price);
+            })   
+        }
+
+        sort_stop(products);
+    }
+
+    function sort_stop(products){
+        document.querySelector("#container").innerHTML = "";
+        
+        products.map(function (food) {
+        var div = document.createElement("div");
+        var image = document.createElement("img");
+        image.setAttribute("src", food.image_url);
+
+        var h2 = document.createElement("h2");
+        h2.textContent = food.name;
+
+        var p = document.createElement("p");
+        p.textContent = food.details;
+
+        var price = document.createElement("h3")
+        price.textContent = "₹ " +food.price + ".00";
+
+        var btn = document.createElement("button");
+        btn.textContent = "Add To Cart";
+
+        btn.addEventListener("click", function () {
+            addToCart(food)
+        })
+
+
+        div.append(image, h2, p, price, btn)
+
+        document.querySelector("#container").append(div);
+
+    })
+    }
+
+  
+
+    function addToCart(food) {
+        cartArr.push(food);
+
+        localStorage.setItem("CartItems", JSON.stringify(cartArr))
+
+        alert("Added Sucesufully");
+
+    }
+
+</script>
