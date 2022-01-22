@@ -1,7 +1,7 @@
-var cartArr = JSON.parse(localStorage.getItem("CartItems"));
-console.log(cartArr);
+var checkoutArr=JSON.parse(localStorage.getItem("CartItems"));
+console.log(checkoutArr);
 
-    cartArr.map(function(data) {
+checkoutArr.map(function(data) {
     var tr = document.createElement("tr");
     // table data row created
 
@@ -31,7 +31,7 @@ console.log(cartArr);
     document.querySelector("tbody").append(tr);
     });
 
-    var subtotal = cartArr.reduce(function(acc, cv) {
+    var subtotal = checkoutArr.reduce(function(acc, cv) {
       return acc + Number(cv.price);
     },0);
 
@@ -39,11 +39,13 @@ console.log(cartArr);
 
     document.querySelector("#subtotal").textContent = `₹${subtotal}.00`;
 
+    document.querySelector("#discount").textContent = `₹${Math.floor(subtotal/3.3)}.00`;
+
     if(subtotal > 1) {
         document.querySelector("#shipping").textContent = ` Flat rate : ₹${50}.00`;
     }
 
-    document.querySelector("#total").textContent = `₹${subtotal + 50}.00`;
+    document.querySelector("#total").textContent = `₹${(subtotal - Math.floor(subtotal/3.3)) + 50}.00`;
 
 
     document.querySelector("#sbmt").addEventListener("click", formSubmit);
