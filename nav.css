@@ -94,6 +94,10 @@ body {
   font-size: 13px;
   border-radius: 20px;
 }
+.nav-right > p {
+  margin-top: 10px;
+  font-weight: bold;
+}
 .nav-right:hover {
   background-color: #8ec038;
 }
