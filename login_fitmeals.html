@@ -14,7 +14,7 @@
         body {
             background-image: url("https://motionarray.imgix.net/preview-851372-ficpAbLmbG0WTger-large.jpg?w=1400&q=60&fit=max&auto=format");
             background-repeat: no-repeat;
-            background-attachment: fixed;
+            background-attachment: scroll;
             background-size: 100%;
         }
         h1 {
@@ -27,7 +27,7 @@
             text-align: center;
             color: white;
             margin: 90px 0;
-            font-size: 60px;
+            font-size: 50px;
         }
         h4, label {
             font-family:'Open Sans', sans-serif;
@@ -54,14 +54,15 @@
         }
         #title_div {
             height: 220px;
-            background-image: url("https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466_1280.jpg");
+            background-image: url("https://motionarray.imgix.net/preview-851372-ficpAbLmbG0WTger-large.jpg?w=1400&q=60&fit=max&auto=format");
             background-repeat: no-repeat;
-            background-attachment: fixed;
+            background-attachment: scroll;
             background-size: 100%;
         }
         #container {
             margin: auto;
             width: 60%;
+            padding-top: 0;
         }
         form {
             border: 1px solid rgb(201, 201, 201);
@@ -108,9 +109,15 @@
             color: red;
             margin-left: 3px;
         }
-        @media only screen and (min-width:0px) and (max-width: 400px) {
+        @media only screen and (min-width:0px) and (max-width: 450px) {
         form {
             height: 320px;
+        }
+        #title {
+          margin: 13% auto;
+        }
+        #title_div {
+            height: 150px;
         }
         #email_title {
             margin-top: 8%;
@@ -120,7 +127,6 @@
         }
         #container {
             width: 96%;
-            margin: auto;
         }
         #check {
             display: inline-block;
@@ -136,7 +142,7 @@
             padding: 5px;
         }
         }
-        @media only screen and (min-width:401px) and (max-width: 950px) {
+        @media only screen and (min-width:401px) and (max-width: 1050px) {
         input {
             height: 35px;
         }
@@ -161,7 +167,6 @@
       </style>
   </head>
   <body>
-      <div id="md"></div>
     <div id="title_div"><h1 id="title">My Account</h1></div>
     <div>
         <div id="container">

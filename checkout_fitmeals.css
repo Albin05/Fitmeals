@@ -25,10 +25,10 @@
       background-color: white;
   }
   #title_div {
-    height: 220px;
+    height: 250px;
     background-image: url("https://motionarray.imgix.net/preview-851372-ficpAbLmbG0WTger-large.jpg?w=1400&q=60&fit=max&auto=format");
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-size: 100%;
   }
   #container {
@@ -180,6 +180,9 @@
     }
     input[type="submit"]:hover {
         background-color: #292d35;
+    }
+    #discount {
+        text-decoration: line-through;
     }
     
   @media only screen and (min-width:0px) and (max-width: 400px) {
