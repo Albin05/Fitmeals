@@ -19,7 +19,7 @@
             margin: 0px;
         }
 
-#container{
+       #container{
             display: grid;
             grid-template-columns: repeat(3,400px);
             justify-content: center;
@@ -27,14 +27,14 @@
             width: 100%;
         
         }
-        @media only screen and (min-width:0px) and (max-width:830px){
+        @media only screen and (min-width:0px) and (max-width:450px){
            #container{
                
                 grid-template-columns: repeat(1,400px);
                 
             }
         } 
-        @media only screen and (min-width:830px) and (max-width:1270px){
+        @media only screen and (min-width:451px) and (max-width:1050px){
            #container{
                
                 grid-template-columns: repeat(2,400px);
@@ -112,7 +112,6 @@
             display: flex;
             justify-content: space-between;
             width: 65%;
-            
             margin-bottom: 100px;
             margin-top: 0;
             position: relative;
@@ -338,18 +337,12 @@
      })
    
 }
-
-   
-   
-   
-    
-
    
 function addToCart(food){
     cartArr.push(food);
     localStorage.setItem("CartItems",JSON.stringify(cartArr))
-    alert("Added Successfully")
-    alert.style.borderRadius="100px"
+    alert("Added Successfully");
+    alert.style.borderRadius="100px";
 }
 </script>
 <script src="nav.js"></script>
