@@ -8,6 +8,9 @@
     <link rel="icon" type="image/icon" href="https://foodiefitmeals.com/wp-content/uploads/2019/04/cropped-favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="nav.css">
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran&family=Fira+Sans:wght@700&family=Sacramento&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/cb4c3d70f3.js" crossorigin="anonymous"></script>
     <style>
         * {
         margin: 0px;
@@ -173,6 +176,68 @@
       </style>
   </head>
   <body>
+
+    <!-- Navbar start -->
+    <div class="nav-top">
+        <div class="left">
+            <i class="fas fa-map-marker-alt yg"></i>
+            <p>Food delivery only in Hyderabad</p> 
+            <i class="fas fa-phone-alt yg"></i>
+            <p>9100347480</p>
+            <i class="far fa-envelope yg"></i>
+            <p>fitmealsindia@gmail.com</p>
+        </div>
+        <div class="right">
+            <i class="fas fa-search focus"></i>
+            <i class="far fa-user focus" onclick="window.location.href='login_fitmeals.html'"></i>
+            <i class="fas fa-shopping-bag focus" onclick="window.location.href='cart.html'"></i>
+        </div>
+    </div>
+    <div class="nav-main">
+        <div class="nav-left">
+            <img src="https://www.fitmeals.co.in/wp-content/uploads/2019/06/logo-black.png" alt="logo">
+        </div>
+        <button class="hamburger" id="hamburger">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="nav-mid" id="nav-mid">
+            <p onclick="window.location.href='home.html'">Home</p>
+            <div class="dropdown">
+                <button class="dropbtn">Meal plans ></button>
+                <div class="dropdown-content">
+                <a href="#">Weight Loss Meal Plan</a>
+                <a href="#">Maintenance Meal Plan</a>
+                <a href="#">Athletic Meal Plan</a>
+                <a href="#">Keto Meal Plan</a>
+                <a href="#">Transformation Challenges</a>
+                </div>
+            </div>
+            <p>Health coaching</p>
+            <div class="dropdown">
+                <button class="dropbtn">Products ></button>
+                <div class="dropdown-content">
+                <a href="prod_01.html">Vegan Sweets</a>
+                <a href="lowcal.html">Low-Cal Sauces</a>
+                <a href="#">Nut Butters</a>
+                <a href="#">Fresh Bakes</a>
+                </div>
+            </div>
+            <p>Blog</p>
+            <div class="dropdown">
+                <button class="dropbtn">About Us ></button>
+                <div class="dropdown-content">
+                <a href="#">Our story</a>
+                <a href="#">FAQ</a>
+                <a href="#">Testimonials</a>
+                </div>
+            </div>
+        </div>
+        <div class="nav-right">
+            <p>Call: 9100347480</p>
+        </div>
+    </div>
+    <!-- Navbar end -->
+
     <div id="title_div"><h1 id="title">My Account</h1></div>
     <div id="main_page">
         <div id="container">
@@ -267,3 +332,4 @@
     }
   }
 </script>
+<script src="nav.js"></script>
