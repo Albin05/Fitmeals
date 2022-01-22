@@ -52,7 +52,7 @@ body{
     padding-top: 80px;
 }
 
-img {
+#product-img {
     margin: auto;
     width: 90%;
     border-radius: 5%;
@@ -61,7 +61,7 @@ img {
     cursor: pointer;
 }
 
-img:hover {
+#product-img:hover {
     transform: translateY(20px);
 }
 
@@ -82,7 +82,7 @@ h2:hover {
     height: 90px;
 }
 
-button {
+.button-anmt {
     margin-bottom: 100px;
     margin-left: 50px;
     width: 200px;
@@ -98,7 +98,7 @@ button {
 
 }
 
-button:hover {
+.button-anmt:hover {
     box-shadow: inset 200px 0 0 #f9e506;
     cursor: pointer;
     color: black;
@@ -216,12 +216,12 @@ body{
     padding-top: 50px;
 }
 
-img {
+#product-img {
     border-radius: 5%;
 }
 
 
-button {
+.button-anmt {
     margin-left: 0px;
     font-size: 1.3rem;
     border-radius: 50px;
@@ -301,11 +301,11 @@ body{
 #heading>h1{
     padding-top: 50px;
 }
-img {
+#product-img {
     border-radius: 5%;
 }
 
-button {
+.button-anmt {
     margin-left: 0px;
     font-size: 1.3rem;
     border-radius: 50px;
