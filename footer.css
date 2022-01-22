@@ -23,7 +23,6 @@ footer {
 }
 
 #footer_box {
-  border: 1px solid red;
   margin: auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -135,10 +134,9 @@ footer {
     width: 90%;
   }
 }
-@media only screen and (min-width: 321px) and (max-width: 730px) {
+@media only screen and (min-width: 451px) and (max-width: 1050px) {
   #footer_body {
     position: relative;
-    padding-bottom: 450px;
   }
   /* footer {
         height: 380px;
