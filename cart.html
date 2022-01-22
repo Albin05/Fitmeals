@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <style>
+          #container{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 60px;
+            
+
+
+           
+        
+        }
+        img{
+            box-shadow:rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            transition: 0.2s ease-out;
+        }
+        img:hover{
+            transform: translateY(20px);
+        }
+        h2{
+            transition: 0.5s;
+        }
+        h2:hover{
+            color: forestgreen;
+            cursor: pointer;
+        }
+
+        #heading{
+            width:100%;
+            height:350px;
+           background-image: url(https://hdqwalls.com/wallpapers/raspberry-good-fruit-plant-4k-um.jpg);
+           background-size: cover;
+        }
+        #heading>h1{
+            text-align: center;
+            color: white;
+            padding-top: 120px;
+            font-size: 50px;
+        }
+        @media only screen and (min-width:211px) and (max-width:720px){
+           #container{
+               
+                grid-template-columns: repeat(2,1fr);
+                
+                
+            }
+        }
+        @media only screen and (min-width:0px) and (max-width:209px){
+           #container{
+               
+                grid-template-columns: repeat(1,1fr);
+                
+            }
+        } 
+        #btn{
+            padding: 20px 40px;
+            color: white;
+            margin-top: 20px;
+            border-radius: 50px;
+            font-size: 20px;
+            margin-left: 30px;
+            background-color: rgb(216, 56, 56);
+            border: none;
+            box-shadow:inset 0 0 0 #961084;
+            transition: ease-in 0.3s;
+            outline: none;
+
+        }
+        #btn:hover{
+            box-shadow: inset 200px 0 0 0 #f9e506 ;
+            cursor: pointer;
+            color:#000;
+        }
+        @media only screen and (min-width:0px) and (max-width:320px){
+           body{
+               
+                display: grid;
+                
+            }
+        }
+        @media only screen and (min-width:321px) and (max-width:720px){
+           body{
+               
+                display: grid;
+                
+                
+            }
+        }
+       #promo{
+           border: none;
+           background-color: greenyellow;
+           padding:10px 40px;
+           border-radius: 5px;
+           color: white;
+       }
+       #mytext{
+           background-color: lightgray;
+           color: red;
+           border: none;
+           padding:10px 40px;
+           border-radius: 5px;
+          margin: 5px;
+       }
+        
+       
+
+
+    </style>
+</head>
+<body>
+    
+    <div id="heading"><h1>CaRt</h1></div>
+   <div > <button id="btn" onclick="window.location.href='check out.html'">Check Out</button>
+    <input type="text" id="mytext"   placeholder="Apply PROMO">
+    <button id=promo onclick="submit()">Submit</button>
+</div>
+    <h2></h2>
+    <div
+    id="container">
+     
+</div>
+
+</body>
+</html>
+<script>
+    var cartArr=JSON.parse(localStorage.getItem("CartItems"));
+    
+     var promo=document.getElementById("mytext")
+     function submit(){
+         if(promo.value=="MASAI30" || promo.value=="SANDEEP007"){
+             var discount=total/30;
+             total=total-discount;
+            
+             document.querySelector("h2").textContent=`Total amount is ₹ ${Math.floor(total)}`
+         }
+         
+         else{
+             alert("Invalid Promo")
+         }
+     }
+
+     
+       
+     
+    
+    
+cartArr.map(function(food){
+        var div=document.createElement("div")
+
+        var image=document.createElement("img")
+        image.setAttribute("src",food.image_url)
+        image.style.borderRadius="10px"
+        image.style.marginLeft="40px"
+        // image.style.boxShadow="rgba(100, 100, 111, 0.2) 0px 7px 29px 0px";
+        
+       
+        
+        var div2=document.createElement("div")
+
+        
+
+        var Name=document.createElement("h2")
+        Name.textContent=food.name
+        Name.style.textAlign="center"
+        
+
+        var detail=document.createElement("p")
+        detail.textContent=food.details;
+        detail.style.textAlign="center"
+
+        var prices=document.createElement("h3")
+        prices.textContent="₹ "+food.price+".00"
+        prices.style.color="red";
+        prices.style.textAlign="center"
+
+        div2.append(Name,detail,prices)
+      
+        
+        
+        
+       
+       
+       
+        div.append(image,div2)
+        document.querySelector("#container").append(div);
+
+         
+        
+    });
+    var total=cartArr.reduce(function(ac,cv){
+        return ac + Number(cv.price)
+    },0)
+  
+    document.querySelector("h2").textContent=`Total amount is ₹ ${total}`
+  
+   
+</script>
