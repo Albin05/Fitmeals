@@ -32,10 +32,11 @@
       #name_title {
           margin-top: 5%;
       }
-      div {
+      #main_page {
           width: 100%;
           padding: 40px 0;
           background-color: white;
+          border: 1px solid green;
       }
       #title_div {
         height: 220px;
@@ -150,11 +151,286 @@
             margin: 9px 5px;
         }
         }
+
+  /* footer css start  */
+        /* ============================================                FOOOTER                   ================================================ */
+
+/*------------------------------------------------------ FOOTER = FULL Screen 721 above ---------------------------------------------------*/
+.footer_img {
+  /* background-color: #8EC038; */
+  width: 200px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transition: 0.2s ease-out;
+  cursor: pointer;
+}
+.footer_img:hover {
+  transform: translateY(20px);
+}
+
+footer {
+  width: 100%;
+  background-color: #292d35;
+  height: 400px;
+  color: white;
+  /* padding-bottom: 10px; */
+  bottom: 0;
+  text-align: center;
+}
+
+#footer_box {
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: "a b c d";
+  width: 70%;
+  /* background-color: chartreuse; */
+  padding-top: 40px;
+}
+
+#footer_box > div:nth-child(1) {
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 15px;
+  text-decoration: none;
+  text-align: left;
+  grid-area: a;
+  color: cornsilk;
+  height: 350px;
+  transition: 0.5s;
+  font-weight: bold;
+}
+#footer_box > div:nth-child(1):hover {
+  color: #8ec038;
+  cursor: pointer;
+}
+
+#footer_box > div:nth-child(2) {
+  font-size: 30px;
+  grid-area: b;
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 350px;
+  color: #8ec038;
+  transition: 0.5s;
+  font-weight: bold;
+}
+
+#footer_box > div:nth-child(2) > h6 {
+  color: #f3f5ed;
+}
+#footer_box > div:nth-child(2) > h6:hover {
+  color: #8ec038;
+  cursor: pointer;
+}
+.h3color {
+  color: yellowgreen;
+}
+
+#footer_box > div:nth-child(3) {
+  font-size: 30px;
+  padding-left: 60px;
+  padding-right: 20px;
+  text-align: left;
+  /* border: 1px solid red; */
+  height: 350px;
+  color: #8ec038;
+  grid-area: c;
+}
+
+#footer_box > div:nth-child(3) > h6 {
+  color: #f3f5ed;
+}
+
+#footer_box > div:nth-child(4) {
+  height: auto;
+  padding-left: 60px;
+  padding-right: 20px;
+  text-align: left;
+  font-size: 30px;
+  height: 350px;
+  /* border: 1px solid red; */
+  color: #8ec038;
+  grid-area: d;
+}
+
+.footer_icon {
+  font-size: 25px;
+}
+
+#footer_box > div:nth-child(4) > h5 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: 0.5s;
+  font-weight: bold;
+}
+#footer_box > div:nth-child(3) > h6:hover {
+  color: #8ec038;
+  cursor: pointer;
+}
+
+#footer_box > div:nth-child(4) > h6 {
+  font-size: 15px;
+  margin: 0px;
+  padding: 0px;
+  color: #f3f5ed;
+  transition: 0.5s;
+  font-weight: bold;
+}
+
+#footer_box > div:nth-child(4) > h6:hover {
+  color: forestgreen;
+  cursor: pointer;
+}
+
+/*------------------------------------------------- FOOTER = MEDIUM SCREEN  (321 to 720) -------------------------------------- */
+@media screen and (max-width: 1110px){
+  #footer_box {
+    width: 90%;
+  }
+}
+@media only screen and (min-width: 451px) and (max-width: 1050px) {
+  #footer_body {
+    position: relative;
+  }
+  /* footer {
+        height: 380px;
+        background-color: black;
+    } */
+  #footer_box {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-areas: "a a a a a a c c c c c c";
+    height: 280px;
+    padding: 50px;
+  }
+
+  #footer_box > div:nth-child(1) {
+    font-size: 16px;
+    height: 300px;
+    width: 250px;
+  }
+  .footer_img {
+    width: 250px;
+  }
+
+  #footer_box > div:nth-child(3) {
+    height: 300px;
+    width: 120px;
+  }
+  #footer_box > div:nth-child(3) > h3 {
+    color: yellowgreen;
+  }
+
+  #footer_box > div:nth-child(4) > h6 {
+    font-size: 0px;
+  }
+  #footer_box > div:nth-child(4) > h3 {
+    font-size: 0px;
+  }
+  #footer_box > div:nth-child(4) > h5 {
+    font-size: 0px;
+  }
+  #footer_box > div:nth-child(4) {
+    width: 0px;
+    height: 0px;
+  }
+
+  #footer_box > div:nth-child(2) {
+    font-size: 0px;
+    height: 0px;
+  }
+
+  #footer_box > div:nth-child(2) > h3 {
+    font-size: 0;
+  }
+}
+
+/* ------------------------------------------------------FOOOTER Small Screen ------------------------------------------------------- */
+
+/*      Footer    Screen      */
+/*      footer   samll    Screen      */
+
+@media only screen and (min-width: 0px) and (max-width: 450px) {
+  #footer_body {
+    position: relative;
+    padding-bottom: 850px;
+  }
+
+  footer {
+    width: 100%;
+    height: 510px;
+    /* background-color: violet; */
+  }
+
+  #footer_box {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+      "a a a a"
+      "c c c c";
+    width: 100%;
+    height: 550px;
+    /* background-color: violet; */
+  }
+
+  #footer_box > div:nth-child(1) {
+    font-size: 16px;
+    color: cornsilk;
+    height: 300px;
+    width: 200px;
+    transition: 0.5s;
+    font-weight: bold;
+  }
+  .footer_img {
+    width: 220px;
+    /* background-color: #8EC038; */
+  }
+
+  #footer_box > div:nth-child(3) {
+    font-size: 30px;
+    padding-left: 60px;
+    padding-right: 20px;
+    text-align: left;
+    /* border: 1px solid red; */
+    height: 220px;
+    color: #8ec038;
+    grid-area: c;
+  }
+  #footer_box > div:nth-child(3) > h3 {
+    color: yellowgreen;
+  }
+
+  #footer_box > div:nth-child(4) > h6 {
+    font-size: 0px;
+  }
+  #footer_box > div:nth-child(4) > h3 {
+    font-size: 0px;
+  }
+  #footer_box > div:nth-child(4) > h5 {
+    font-size: 0px;
+  }
+  #footer_box > div:nth-child(4) {
+    width: 0px;
+    height: 0px;
+  }
+
+  #footer_box > div:nth-child(2) {
+    font-size: 0px;
+    height: 0px;
+  }
+
+  #footer_box > div:nth-child(2) > h3 {
+    font-size: 0;
+  }
+}
+
+/* Footer CSS end */
     </style>
   </head>
   <body>
     <div id="title_div"><h1 id="title">My Account</h1></div>
-    <div>
+    <div id="main_page">
       <div id="container">
           <h1>Create Account</h1>
           <form>
@@ -173,6 +449,59 @@
           </form>
         </div>
     </div>
+    <footer>
+      <div id="footer_body">
+        <div id="footer_box">
+            <div class="social">
+                <img class="footer_img" onclick="window.location.href='card.html'"
+                    src="https://www.fitmeals.co.in/wp-content/uploads/2019/06/logo-white.png">
+                <p>The Fitmeals culinary team consists of very<br> passionate and skilled chefs.<br> Our team is well
+                    versed in nutrition and all our menus and plans are designed by qualified nutrition experts.</p>
+                <div class="footer_icon">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                    <ion-icon name="logo-twitter"></ion-icon>
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </div>
+            </div>
+            <div class="explore">
+                <h3>Explore</h3>
+                <h6>
+                    <ion-icon name="chevron-forward-outline"></ion-icon>Home
+                </h6>
+
+            </div>
+            <div class="links">
+                <h3>Links</h3>
+                <h6>
+                    <ion-icon name="chevron-forward-outline"></ion-icon>About Us
+                </h6>
+                <h6>
+                    <ion-icon name="chevron-forward-outline"></ion-icon>Blog
+                </h6>
+
+            </div>
+            <div class="contact">
+                <h3>Contact Us:</h3>
+                <h5>
+                    <ion-icon name="call-outline"></ion-icon> Call Us:<br>
+                    <h6>9004322729</h6>
+                </h5>
+                <h5>
+                    <ion-icon name="mail-outline"></ion-icon> Email Us:<br>
+                    <h6>fitmealsindia@gmail.com</h6>
+                </h5>
+                <h5>
+                    <ion-icon name="location-outline"></ion-icon> Our Location:<br>
+                    <h6>Banjara Hills, Road no.5, Hyderabad</h6>
+                </h5>
+            </div>
+
+
+        </div>
+      </div>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </footer>
   </body>
 </html>
 
