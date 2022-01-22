@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Placed - Fitmeals</title>
+    <link rel="stylesheet" href="checkout_fitmeals.css">
+    <style>
+        .price {
+            font-weight: lighter;
+            color: rgb(92, 91, 91);
+        }
+        .details {
+            display: flex;
+            margin: 0 auto;
+            width: 32%;
+            justify-content: center;
+            padding: 0;
+        }
+        span {
+            color: #292d35;
+            font-weight: bold;
+        }
+        .details > h4 {
+            margin: 0;
+            width: 50%;
+        }
+        button {
+            width: 40%;
+            height: 40px;
+            margin: 0 30%;
+            background-color: #292d35;
+            border: none;
+            border-radius: 50px;
+            color: white;
+            font-size: large;
+        }
+        button:hover {
+            background-color: #8ec038;
+        }
+        @media only screen and (min-width:0px) and (max-width: 400px) {
+            .details {
+                width : 90%;
+                margin: 0 auto;
+                flex-direction: column;
+            }
+            .details > h4 {
+            text-align: center;
+            margin: 5px 0;
+            width: 100%;
+           }
+        }
+        @media only screen and (min-width:401px) and (max-width: 950px) {
+            .details {
+                width : 60%;
+                margin : 0 auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div id="title_div"><h1 id="title">Checkout</h1></div>
+        <div>
+            <h4 class="lines" style="text-align: center; color: #292d35">Thank you. Your order has been received.</h4>
+            <div class="details">
+                <h4 class="price">ORDER NUMBER : <span>1648</span></h4>
+                <h4 class="price">DATE : <span>January 21 2022</span></h4>
+            </div>
+        </div>
+        <h1>Order Details</h1>
+        <div id="table">
+            <table class="table1">
+                <thead>
+                    <tr class="head">
+                        <th>Product</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            <table class="table2">
+                <tr>
+                    <td class="total">Subtotal</td>
+                    <td class="price" id="subtotal">₹0</td>
+                </tr>
+                <tr>
+                    <td class="total">Shipping</td>
+                    <td class="price" id="shipping">₹0</td>
+                </tr>
+                <tr>
+                    <td class="total">Payment Method</td>
+                    <td class="price" id="shipping">Cash on delivery: Pay on the first day of your meals.</td>
+                </tr>
+                <tr>
+                    <td class="total">Total</td>
+                    <td class="price" id="total">₹0</td>
+                </tr>
+            </table>
+        </div>
+        <button onclick="window.location.href='login_fitmeals.html'">Return Home</button>
+    </div>
+</body>
+</html>
+<script src="checkout_fitmeals.js"></script>
