@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Account - Fitmeals</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+    <style>
+        * {
+        margin: 0px;
+        }
+        body {
+            background-image: url("https://motionarray.imgix.net/preview-851372-ficpAbLmbG0WTger-large.jpg?w=1400&q=60&fit=max&auto=format");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100%;
+        }
+        h1 {
+          font-family: 'Open Sans', sans-serif;
+          color:#292d35;
+          margin: 25px 0;
+          font-size: 35px;
+        }
+        #title {
+            text-align: center;
+            color: white;
+            margin: 90px 0;
+            font-size: 60px;
+        }
+        h4, label {
+            font-family:'Open Sans', sans-serif;
+            color: rgb(92, 91, 91);
+            margin: 2% 10% 1% 6%;
+            font-size: 90%;
+        }
+        #create_acc {
+            font-family:'Open Sans', sans-serif;
+            color: rgb(92, 91, 91);
+            margin: 4% 5% 6% 3%;
+            text-decoration: none;
+            display: block;
+        }
+        #email_title {
+            margin-top: 5%;
+        }
+        div {
+          padding: 40px 0;
+          background-color: white;
+        }
+        #title_div {
+            height: 220px;
+            background-image: url("https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466_1280.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100%;
+        }
+        #container {
+            margin: auto;
+            width: 60%;
+        }
+        form {
+            border: 1px solid rgb(201, 201, 201);
+            border-radius: 5px;
+        }
+        input {
+          display: block;
+          width: 86%;
+          margin: 0 5% 5% 3%;
+          height: 40px;
+          padding: 10px 4%;
+          font-size: large;
+          border-radius: 50px;
+          border: 1px solid rgb(220, 220, 220);
+        }
+        #sbmt {
+          margin-bottom: 0;
+          color: white;
+          height: 40px;
+          width: 20%;
+          padding: 10px;
+          text-align: center;
+          background-color: #da2424;
+          font-family: 'Open Sans', sans-serif;
+          font-size: 90%;
+          display: inline-block;
+          vertical-align: top;
+          transition: background-color .5s;
+        }
+        #sbmt:hover {
+         background-color: #8ec038;
+        }
+        #check {
+            display: inline-block;
+            width: 15px;
+            margin: 2px 0;
+        }
+        label {
+            display: inline-block;
+            vertical-align: top;
+            margin: 10px 5px;
+        }
+        span {
+            color: red;
+            margin-left: 3px;
+        }
+        @media only screen and (min-width:0px) and (max-width: 400px) {
+        form {
+            height: 320px;
+        }
+        #email_title {
+            margin-top: 8%;
+        }
+        input {
+            height: 25px;
+        }
+        #container {
+            width: 96%;
+            margin: auto;
+        }
+        #check {
+            display: inline-block;
+            width: 15px;
+            margin: 5px 0;
+        }
+        label {
+            display: inline-block;
+            vertical-align: top;
+            margin: 6px 5px;
+        }
+        #sbmt {
+            padding: 5px;
+        }
+        }
+        @media only screen and (min-width:401px) and (max-width: 950px) {
+        input {
+            height: 35px;
+        }
+        #container {
+            margin: auto;
+            width: 96%;
+        }
+        #check {
+            display: inline-block;
+            width: 15px;
+            margin:0;
+        }
+        label {
+            display: inline-block;
+            vertical-align: top;
+            margin: 9px 5px;
+        }
+        }
+        #md {
+            height: 100px;
+        }
+      </style>
+  </head>
+  <body>
+      <div id="md"></div>
+    <div id="title_div"><h1 id="title">My Account</h1></div>
+    <div>
+        <div id="container">
+            <h1>Login</h1>
+            <form>
+            <h4 id="email_title">Username or email address<span>*</span></h4>
+            <input id="email" type="email" required/>
+            <h4>Password<span>*</span></h4>
+            <input id="pass" type="password"  required/>
+            <input id="sbmt" type="submit" value="Log in" />
+            <input type="checkbox" name="check" class = "checkbo" id="check">
+            <label for="check" class="checkbo">Remember Me</label>
+            <a href="create_acc.html" id="create_acc">Create your Account</a>
+            </form>
+        </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  document.querySelector("form").addEventListener("submit", signin);
+
+  var existing_user = JSON.parse(localStorage.getItem("fitMealUserData"));
+
+  function signin(event) {
+    event.preventDefault();
+    var pass = document.querySelector("#pass").value;
+    var email_username = document.querySelector("#email").value;
+
+    for (var i = 0; i < existing_user.length; i++) {
+
+      if ((existing_user[i].emailAdd == email_username || existing_user[i].userName == email_username) && existing_user[i].passwd == pass) {
+        alert("Login Successfull!!!")
+        window.location.href = "create_acc.html";
+      }
+      else if ((existing_user[i].emailAdd != email_username || existing_user[i].userName != email_username) || existing_user[i].passwd != pass && i == existing_user.length-1) {
+          alert("Ooops Wrong Login Credentials!!!")
+      }
+    }
+  }
+</script>
