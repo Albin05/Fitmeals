@@ -2,7 +2,6 @@
 
 /*------------------------------------------------------ FOOTER = FULL Screen 721 above ---------------------------------------------------*/
 .footer_img {
-  /* background-color: #8EC038; */
   width: 200px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   transition: 0.2s ease-out;
@@ -17,7 +16,6 @@ footer {
   background-color: #292d35;
   height: 400px;
   color: white;
-  /* padding-bottom: 10px; */
   bottom: 0;
   text-align: center;
 }
@@ -27,10 +25,8 @@ footer {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-areas: "a b c d";
-  width: 70%;
-  /* background-color: chartreuse; */
+  width: 80%;
   padding-top: 40px;
-  /* border: 1px solid red; */
 }
 
 #footer_box > div:nth-child(1) {
@@ -89,12 +85,11 @@ footer {
 
 #footer_box > div:nth-child(4) {
   height: auto;
-  padding-left: 60px;
+  padding-left: 20px;
   padding-right: 20px;
   text-align: left;
   font-size: 30px;
   height: 350px;
-  /* border: 1px solid red; */
   color: #8ec038;
   grid-area: d;
 }
@@ -131,20 +126,19 @@ footer {
 
 /*------------------------------------------------- FOOTER = MEDIUM SCREEN  (321 to 720) -------------------------------------- */
 
-@media only screen and (min-width: 451px) and (max-width: 1050px) {
+@media only screen and (min-width: 451px) and (max-width: 1240px) {
   /* #footer_body {
     position: relative;
   } */
   footer {
-        width: 100%;
-    }
+    width: 100%;
+  }
   #footer_box {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(1, 1fr);
     grid-template-areas: "a a a a a a c c c c c c";
     height: 280px;
-    /* padding: 10px 0 0 50px; */
-    width: 100%;
+    width: 70%;
   }
 
   #footer_box > div:nth-child(1) {
@@ -196,13 +190,11 @@ footer {
 @media only screen and (min-width: 0px) and (max-width: 450px) {
   #footer_body {
     position: relative;
-    /* padding-bottom: 850px; */
   }
 
   footer {
     width: 100%;
     height: 510px;
-    /* background-color: violet; */
   }
 
   #footer_box {
@@ -213,7 +205,6 @@ footer {
       "c c c c";
     width: 100%;
     height: 550px;
-    /* background-color: violet; */
   }
 
   #footer_box > div:nth-child(1) {
@@ -226,7 +217,6 @@ footer {
   }
   .footer_img {
     width: 220px;
-    /* background-color: #8EC038; */
   }
 
   #footer_box > div:nth-child(3) {
@@ -234,7 +224,6 @@ footer {
     padding-left: 60px;
     padding-right: 20px;
     text-align: left;
-    /* border: 1px solid red; */
     height: 220px;
     color: #8ec038;
     grid-area: c;
