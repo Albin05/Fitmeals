@@ -29,7 +29,6 @@ body{
 
 #name{
     margin-top: 0%;
-    /* background-color: grey; */
     width: 100%;
 }
 
@@ -143,18 +142,11 @@ body{
     height: 200px;
     margin-bottom: 30px;
 }
-.name_head{
-}
+
 
 .img_head{
     width: 100%;
     margin-bottom: 0px;
-}
-
-#name{
- 
-    /* background-color: grey; */
-  
 }
 
 .name_header{
@@ -181,13 +173,6 @@ body{
     margin-bottom: 0px;
 }
 
-.photo :nth-child(2) {
-}
-.photo :nth-child(3) {
-   
-}
-.photo :nth-child(4) {
-}
 
 
 #mission{
