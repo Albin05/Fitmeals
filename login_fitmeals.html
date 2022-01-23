@@ -324,7 +324,7 @@
 
       if ((existing_user[i].emailAdd == email_username || existing_user[i].userName == email_username) && existing_user[i].passwd == pass) {
         alert("Login Successfull!!!")
-        window.location.href = "create_acc.html";
+        window.location.href = "home.html";
       }
       else if ((existing_user[i].emailAdd != email_username || existing_user[i].userName != email_username) || existing_user[i].passwd != pass && i == existing_user.length-1) {
           alert("Ooops Wrong Login Credentials!!!")
