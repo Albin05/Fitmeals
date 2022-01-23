@@ -2,7 +2,7 @@
 
 
 This is a clone of https://www.fitmeals.co.in/ website which is a project we got in our construct week of second unit in Masai school.
-
+![This is an image](img.jpeg)
 The stack used is HTML, CSS and Javascript.
 
 The functionality of website such as login, signup, product pages and add to cart has been added.
