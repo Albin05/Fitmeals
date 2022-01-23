@@ -329,6 +329,9 @@
       else if ((existing_user[i].emailAdd != email_username || existing_user[i].userName != email_username) || existing_user[i].passwd != pass && i == existing_user.length-1) {
           alert("Ooops Wrong Login Credentials!!!")
       }
+      else if (existing_user.length == 0) {
+          alert("Ooops Wrong Login Credentials!!!")
+      }
     }
   }
 </script>
