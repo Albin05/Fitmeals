@@ -53,3 +53,10 @@ checkoutArr.map(function(data) {
     function formSubmit(event) {
         window.location.href="orderplaced.html";
     }
+
+    // document.getElementById("return").addEventListener("click", emptyCart);
+
+    function emptyCart() {
+        window.location.href = "home.html";
+        localStorage.removeItem("CartItems");
+    }
