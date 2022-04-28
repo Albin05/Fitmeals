@@ -1,7 +1,11 @@
 **Fitmeals Clone**
 
 
-This is a clone of https://www.fitmeals.co.in/ website which is a project we got in our construct week of second unit in Masai school.
+This is a clone of a ecommerce website which is a project we got in our construct week of second unit in Masai school.
+
+Live Demo : https://fitmeals-project.netlify.app/
+
+
 ![This is an image](img.jpeg)
 The stack used is HTML, CSS and Javascript.
 
