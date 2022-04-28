@@ -7,14 +7,16 @@ Live Demo : https://fitmeals-project.netlify.app/
 
 
 ![This is an image](img.jpeg)
-The stack used is HTML, CSS and Javascript.
+The stack used 
+*HTML 
+*CSS
+*Javascript.
 
 The functionality of website such as login, signup, product pages and add to cart has been added.
 The website has been made very responsive which is very useful on devices with small screens.
 
 
-As there is no backend data servers you will have to open the data_1245.html on your browser to access the data on your local storage. 
-Now you can open the home.html and navigate through our website.
+Clone the repository or download the code and run home.html file and enjoy browsing.
 
 First project..!!!
 
