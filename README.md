@@ -6,7 +6,6 @@ This is a clone of an ecommerce website which is a project we got in our constru
 
 ## Live Demo : https://fitmeals-project.netlify.app/
 
-
 ![This is an image](img.jpeg)
 ## Tech stack used :
 * HTML 
@@ -31,6 +30,8 @@ Clone the repository or download the code and run home.html file and enjoy brows
 
 First project..!!!
 
+
+![This is an image](fitmeals.gif)
 
 
 
