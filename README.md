@@ -14,7 +14,6 @@ This is a clone of an ecommerce website which is a project we got in our constru
 
 We have deployed the website on Netlify.
 
-Functionalities such as add to cart, checkout page, login & signup are added.
 
 We have added advanced css animations on the homepage to make the UI more attractive.
 
