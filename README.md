@@ -17,12 +17,13 @@ We have deployed the website on Netlify.
 
 We have added advanced css animations on the homepage to make the UI more attractive.
 
-The website is very responsive hence it supports display of all the sizes.
-
 Hamburger menu has been implemented so that the mobile users can navigate through pages very easily.
 
 The functionality of website such as login, signup, product pages and add to cart has been added.
-The website has been made very responsive which is very useful on devices with small screens.
+
+The website has been made very responsive which is very useful on devices with small screens it supports display of all sizes.
+
+Grid and flex have been implemented to achieve the layouts on different pages.
 
 
 Clone the repository or download the code and run home.html file and enjoy browsing.
