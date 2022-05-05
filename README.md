@@ -30,6 +30,17 @@ Clone the repository or download the code and run home.html file and enjoy brows
 
 First project..!!!
 
+## User flow of the website
+
+* First the user lands on the home page, where the user can read more about the products and services which are provided.
+* Then the user is been directed to the products page, On the products page the user can sort, filter and add the required products to the cart.
+* In the cart page the user can apply a promo code and get a discount on the products which he wants to purchase.
+* Before moving to the checkout page the user has to get authenticated and if the user has not logged in or signed in he is directed to the respective page. where he has to submit his credentials to login to the website.
+* After that the user is redirected to the checkout page to enter his billing and shipping address.
+* Then the user is directed to the payment gateway.
+* And in the end the user lands on confirmation page where he gets to know about the status of his order.
+
+## Some visuals of our website
 
 ![This is an image](fitmeals.gif)
 
